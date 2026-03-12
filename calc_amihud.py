@@ -20,8 +20,9 @@ import numpy as np
 from pathlib import Path
 
 DATA_DIR = Path(r"c:\Users\vmc30\OneDrive\Desktop\Personal_Repos\yfinance\data")
-INPUT = DATA_DIR / "us_equities_2025_ohlcv.parquet"
-OUTPUT = DATA_DIR / "us_equities_2025_amihud.parquet"
+INPUT    = DATA_DIR / "us_equities_2025_ohlcv.parquet"
+OUTPUT   = DATA_DIR / "us_equities_2025_amihud.parquet"
+OUTPUT_ANNUAL = DATA_DIR / "us_equities_2025_amihud_annual.parquet"
 
 ROLLING_WINDOW = 21
 
@@ -55,6 +56,11 @@ def compute_amihud(df: pd.DataFrame) -> pd.DataFrame:
     # Drop first row per ticker (no return on day 1)
     df = df.dropna(subset=["return"]).reset_index(drop=True)
 
+    # Amihud (2002) annual mean: mean of daily illiq over the full year per ticker
+    # Broadcast back as a constant column so the panel stays self-contained
+    annual_mean = df.groupby("ticker")["illiq"].mean().rename("illiq_annual")
+    df = df.join(annual_mean, on="ticker")
+
     return df
 
 
@@ -69,12 +75,25 @@ if __name__ == "__main__":
     # Keep useful columns in clean order
     cols = [
         "ticker", "date", "close", "volume", "dollar_volume",
-        "return", "abs_return", "illiq", "illiq_21d",
+        "return", "abs_return", "illiq", "illiq_21d", "illiq_annual",
     ]
     result = result[cols]
 
-    print(f"Saving {OUTPUT}...")
+    print(f"Saving panel -> {OUTPUT}...")
     result.to_parquet(OUTPUT, index=False, engine="pyarrow")
+
+    # Annual summary: one row per ticker (Amihud 2002 original)
+    annual = (
+        result.groupby("ticker")
+        .agg(
+            trading_days=("date", "count"),
+            illiq_annual=("illiq_annual", "first"),
+        )
+        .reset_index()
+        .sort_values("illiq_annual", ascending=False)
+    )
+    print(f"Saving annual summary -> {OUTPUT_ANNUAL}...")
+    annual.to_parquet(OUTPUT_ANNUAL, index=False, engine="pyarrow")
 
     # Summary stats
     print(f"\n{'='*60}")
@@ -97,12 +116,12 @@ if __name__ == "__main__":
     print(f"    non-null:     {illiq_21.notna().sum():,}")
     print(f"    NaN count:    {illiq_21.isna().sum():,}")
 
-    # Cross-sectional snapshot: median ILLIQ_21d by ticker on last date
-    last_date = result["date"].max()
-    snap = result[result["date"] == last_date].copy()
-    print(f"\n  Cross-section on {last_date.date()}:")
-    print(f"    Tickers with illiq_21d: {snap['illiq_21d'].notna().sum()}")
-    q = snap["illiq_21d"].quantile([0.1, 0.25, 0.5, 0.75, 0.9])
+    print(f"\n  ILLIQ annual (Amihud 2002) — {len(annual)} tickers:")
+    q = annual["illiq_annual"].quantile([0.1, 0.25, 0.5, 0.75, 0.9])
     for pct, val in q.items():
         print(f"    p{int(pct*100):02d}:          {val:.2e}")
+    print(f"\n  Most illiquid (top 10):")
+    print(annual.head(10).to_string(index=False))
+    print(f"\n  Most liquid (bottom 10):")
+    print(annual.tail(10).to_string(index=False))
     print(f"{'='*60}")
