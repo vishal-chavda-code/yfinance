@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+data/raw_chunks/
+data/progress.json
+data/download.log
