@@ -18,7 +18,7 @@ import time
 import logging
 from pathlib import Path
 from src.config import (
-    DATA_DIR, TICKER_FILE, BBG_FREE_FLOAT,
+    DATA_DIR, STAGING_DIR, LOGS_DIR, TICKER_FILE, BBG_FREE_FLOAT,
     BBG_HOST, BBG_PORT, MONTHLY_DATES_2025,
 )
 
@@ -27,14 +27,14 @@ logging.basicConfig(
     format="%(asctime)s [%(levelname)s] %(message)s",
     handlers=[
         logging.StreamHandler(),
-        logging.FileHandler(DATA_DIR / "bbg_free_float.log", mode="a"),
+        logging.FileHandler(LOGS_DIR / "bbg_free_float.log", mode="a"),
     ],
 )
 log = logging.getLogger("bbg_ff")
 
 FIELDS = ["CUR_MKT_CAP", "EQY_FREE_FLOAT_PCT"]
 BATCH_SIZE = 50  # Bloomberg typically allows up to ~500 securities per request
-PROGRESS_FILE = DATA_DIR / "bbg_free_float_progress.json"
+PROGRESS_FILE = LOGS_DIR / "bbg_free_float_progress.json"
 
 
 def yf_to_bbg(ticker: str) -> str:
@@ -170,7 +170,7 @@ if __name__ == "__main__":
         for ref_date in MONTHLY_DATES_2025:
             if ref_date in progress["completed"]:
                 log.info(f"Skipping {ref_date} (already done)")
-                cached = pd.read_parquet(DATA_DIR / f"bbg_ff_{ref_date}.parquet")
+                cached = pd.read_parquet(STAGING_DIR / f"bbg_ff_{ref_date}.parquet")
                 all_dfs.append(cached)
                 continue
 
@@ -178,7 +178,7 @@ if __name__ == "__main__":
             df = pull_month(session, tickers_bbg, ref_date)
 
             if not df.empty:
-                interim = DATA_DIR / f"bbg_ff_{ref_date}.parquet"
+                interim = STAGING_DIR / f"bbg_ff_{ref_date}.parquet"
                 df.to_parquet(interim, index=False, engine="pyarrow")
                 all_dfs.append(df)
                 log.info(f"  ✓ {len(df)} records, {df['free_float_mkt_cap'].notna().sum()} with ff_mkt_cap")

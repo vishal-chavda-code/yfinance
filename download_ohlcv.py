@@ -18,21 +18,25 @@ from pathlib import Path
 
 # ── Configuration ───────────────────────────────────────────────────────
 DATA_DIR = Path(r"c:\Users\vmc30\OneDrive\Desktop\Personal_Repos\yfinance\data")
-RAW_DIR = DATA_DIR / "raw_chunks"
+STAGING_DIR = DATA_DIR / "staging"
+LOGS_DIR = DATA_DIR / "logs"
+RAW_DIR = STAGING_DIR / "raw_chunks"   # intermediate download chunks
 CHUNK_SIZE = 50
 PRICE_CUTOFF = 5.0
 START = "2025-01-01"
 END = "2026-01-01"  # exclusive
-PROGRESS_FILE = DATA_DIR / "progress.json"
+PROGRESS_FILE = LOGS_DIR / "progress.json"
 TICKER_FILE = DATA_DIR / "ticker_universe.json"
 
 DATA_DIR.mkdir(parents=True, exist_ok=True)
+STAGING_DIR.mkdir(parents=True, exist_ok=True)
+LOGS_DIR.mkdir(parents=True, exist_ok=True)
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
     handlers=[
         logging.StreamHandler(),
-        logging.FileHandler(DATA_DIR / "download.log", mode="a"),
+        logging.FileHandler(LOGS_DIR / "download.log", mode="a"),
     ],
 )
 log = logging.getLogger("yf_download")
@@ -371,6 +375,8 @@ def completeness_report(df):
 
 if __name__ == "__main__":
     DATA_DIR.mkdir(parents=True, exist_ok=True)
+    STAGING_DIR.mkdir(parents=True, exist_ok=True)
+    LOGS_DIR.mkdir(parents=True, exist_ok=True)
     RAW_DIR.mkdir(parents=True, exist_ok=True)
 
     # 1. Ticker universe

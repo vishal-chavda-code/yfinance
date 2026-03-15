@@ -1,0 +1,19 @@
+/* Sidebar collapse — hide labels & section headers when collapsed */
+.sidebar-collapsed .sidebar-label,
+.sidebar-collapsed .sidebar-section {
+    display: none !important;
+}
+.sidebar-collapsed .nav-link-btn {
+    justify-content: center !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* Smooth nav hover */
+.nav-link-btn:hover {
+    background-color: rgba(255,255,255,0.04) !important;
+}
+
+/* Scrollbar styling */
+#sidebar::-webkit-scrollbar { width: 4px; }
+#sidebar::-webkit-scrollbar-thumb { background: #1E2D4A; border-radius: 4px; }
