@@ -1570,17 +1570,15 @@ def page_staleness():
                 dcc.Graph(figure=fig_staleness_vs_amihud_volatility(),
                           config={"displayModeBar": False}),
                 dcc.Markdown("""
-**Coefficient of Variation (CV)** = standard deviation / mean — a unitless measure of how
-much Amihud ILLIQ varied within the year for each stock. A CV of 0.5 means liquidity
-conditions swung by half the annual average; a CV near 0 means liquidity was stable all year.
+**Y-axis: Coefficient of Variation (CV)** = std / mean of Amihud ILLIQ within the year.
+Higher = liquidity conditions varied more. A CV of 0.5 means friction swung by half the
+annual average.
 
-**What this shows:** Stocks in the **upper-right** corner had highly volatile liquidity
-(high CV) yet their free-float value never changed (long streak). This is where FF% fails
-most — it reports "no change" while actual trading friction is swinging significantly.
+**X-axis: Longest FF% unchanged streak** in months. Right = staler data.
 
-**Is Amihud doing its job?** Yes — the wide vertical spread of CV values across all streak
-lengths proves Amihud *detects* liquidity variation that FF% completely misses. That's
-the operational case: if you rely only on FF%, you're blind to these shifts.
+**Reading the chart:** Upper-right = stocks where liquidity varied a lot but FF% never
+updated. Upper-left = stocks where both signals detected change. The vertical spread at
+each streak length shows how much liquidity variation FF% missed at that staleness level.
 """, style={"color": COLORS["text_muted"], "fontSize": "0.85rem", "lineHeight": 1.6,
             "marginTop": "12px"}),
             ]),
@@ -1822,13 +1820,12 @@ def page_time():
                 html.H5("Consistent Across All 12 Months", style={
                     "color": COLORS["accent_cyan"], "fontWeight": 700, "marginBottom": "8px"}),
                 dcc.Markdown("""
-The Amihud line (solid blue) sits **consistently above** the Free-Float line (dashed orange)
-across every month of 2025. There's no single volatile month driving the result — the
-superiority is persistent and reliable.
+The Amihud line (solid blue) sits consistently above the Free-Float line (dashed orange)
+in every month. The relationship is stable — it's not driven by a single volatile period.
 
-This temporal stability is critical for a risk model: a signal that only works during crises
-isn't useful for position sizing in normal markets. Amihud works in both calm and volatile
-periods because it's derived from live trading data — not static filings.
+Note: these are **univariate R²** values (no size control). Much of the gap reflects
+Amihud's correlation with market cap. The within-size-bucket comparison (Robustness tab)
+is the more controlled test.
 """, style={"color": COLORS["text_muted"], "fontSize": "0.85rem", "lineHeight": 1.6}),
             ]),
             style={"backgroundColor": COLORS["card"], "border": f"1px solid {COLORS['card_border']}",
@@ -2175,15 +2172,15 @@ def page_scenario_matrix():
                 html.H5("Why This Matters", style={
                     "color": COLORS["accent_red"], "fontWeight": 700, "marginBottom": "8px"}),
                 dcc.Markdown("""
-The **p99 upside** widens from ~2-3% for mega-caps to potentially hundreds of percent for
-nano-caps. The **asymmetry ratio** (upside width / downside width) itself increases as you
-move down the spectrum — nano-cap upside tails are 2-5× wider than their downside.
+**What the data shows:** The p99 upside widens from ~2-3% for mega-caps to much larger values
+for nano-caps. The asymmetry ratio (upside / downside) also increases down the spectrum.
 
-**Free-float is bucket-blind.** A nano-cap and a mega-cap can share identical free-float
-percentages, yet their extreme tail profiles differ by orders of magnitude.
+**The overlay charts** compare whether each signal tracks this gradient. If median Amihud
+rises monotonically from Mega to Nano alongside the widening tails, it tracks the risk
+surface. If median FF% is flat or non-monotonic across buckets, it doesn't.
 
-**Amihud captures the mechanism.** Thin order books, wide spreads, and low dollar volume
-are exactly what drives fat tails in small stocks — and that is exactly what Amihud measures.
+**Caveat:** Both Amihud and FF% correlate with size. The question is which one tracks the
+*shape* of the tail distribution, not just the level.
 """, style={"color": COLORS["text_muted"], "fontSize": "0.85rem", "lineHeight": 1.6}),
             ]),
             style={"backgroundColor": COLORS["card"], "border": f"1px solid {COLORS['card_border']}",
@@ -2755,15 +2752,12 @@ def page_asymmetry():
                 html.H5("The Risk Case", style={
                     "color": COLORS["accent_red"], "fontWeight": 700, "marginBottom": "8px"}),
                 dcc.Markdown("""
-**Downside liquidity is the critical scenario.** The question isn't "can this stock go up 500%?"
-— it's "can this stock gap down 80% before we can exit?"
+**What to look for:** If Amihud's R² is higher on down days than up days, it captures
+downside return variation better — the scenario risk management cares about most.
 
-If Amihud's R² is **higher on down days** than up days, it confirms the measure is specifically
-tuned to the risk case. Free-float, being symmetric by construction, shows no such asymmetry
-— it can't differentiate between stocks that are about to gap down vs. gap up.
-
-This is the **downside liquidity warning system** that the Amihud z-score provides:
-elevated z-scores on a stock heading into weak tape conditions are the highest-priority alert.
+Free-float is symmetric by construction (same value on up and down days), so it cannot
+show directional asymmetry. If the data shows Amihud with higher down-day R², that's
+a genuine structural difference between the two signals — not an artifact of size.
 """, style={"color": COLORS["text_muted"], "fontSize": "0.85rem", "lineHeight": 1.6}),
             ]),
             style={"backgroundColor": COLORS["card"], "border": f"1px solid {COLORS['card_border']}",
