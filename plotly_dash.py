@@ -2209,7 +2209,7 @@ def _fig_scenario_heatmap(sm):
     fig.update_layout(
         template=PLOT_TEMPLATE,
         title=dict(text="Extreme Return Tails by Market Cap Bucket (p99)", font=dict(size=16)),
-        height=320, yaxis=dict(autorange="reversed"),
+        height=340, yaxis=dict(autorange="reversed"), margin=dict(t=60),
     )
     return fig
 
@@ -2232,7 +2232,7 @@ def _fig_asymmetry_ratio(sm):
     fig.update_layout(
         template=PLOT_TEMPLATE,
         title=dict(text="Tail Asymmetry (p99 Up / p99 Down)", font=dict(size=16)),
-        yaxis=dict(title="Ratio"), height=320,
+        yaxis=dict(title="Ratio"), height=360, margin=dict(t=60),
     )
     return fig
 
@@ -2252,7 +2252,8 @@ def _fig_scenario_overlay(sm, col, y_label, title, color, log_y=False):
     ), secondary_y=True)
     fig.update_layout(
         template=PLOT_TEMPLATE, title=dict(text=title, font=dict(size=16)),
-        height=360, legend=dict(orientation="h", yanchor="bottom", y=1.05, xanchor="center", x=0.5),
+        height=400, margin=dict(t=80),
+        legend=dict(orientation="h", yanchor="bottom", y=1.08, xanchor="center", x=0.5),
     )
     fig.update_yaxes(title_text="p99 Upside %", secondary_y=False)
     fig.update_yaxes(title_text=y_label, secondary_y=True,
