@@ -1008,13 +1008,13 @@ def fig_interaction_heatmap(metric="ret"):
 def fig_distribution_overview():
     """Distribution overview of key variables."""
     fig = make_subplots(rows=1, cols=3,
-                        subplot_titles=["Free-Float %", "log₁₀(Amihud ILLIQ)", "H-L Range"])
+                        subplot_titles=["Free-Float % (0–100)", "log₁₀(Amihud ILLIQ)", "H-L Range (decimal)"])
 
-    ff_vals = df["eqy_free_float_pct"].dropna()
+    ff_vals = df["eqy_free_float_pct"].dropna().clip(upper=100)  # cap at 100% — values >100 are bad data
     fig.add_trace(go.Histogram(
-        x=ff_vals, nbinsx=60,
+        x=ff_vals, nbinsx=50,
         marker=dict(color=COLORS["accent_blue"], line=dict(width=0)),
-        hovertemplate="FF%: %{x:.0f}<br>Count: %{y:,}<extra></extra>",
+        hovertemplate="FF%: %{x:.0f}%<br>Count: %{y:,}<extra></extra>",
     ), row=1, col=1)
 
     illiq_vals = np.log10(df["illiq_252d"].dropna().clip(lower=1e-15))
@@ -1028,7 +1028,7 @@ def fig_distribution_overview():
     fig.add_trace(go.Histogram(
         x=hl_vals, nbinsx=60,
         marker=dict(color=COLORS["accent_green"], line=dict(width=0)),
-        hovertemplate="H-L Range: %{x:.3f}<br>Count: %{y:,}<extra></extra>",
+        hovertemplate="H-L Range: %{x:.2%}<br>Count: %{y:,}<extra></extra>",
     ), row=1, col=3)
 
     fig.update_layout(
