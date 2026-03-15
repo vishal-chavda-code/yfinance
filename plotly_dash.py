@@ -128,7 +128,7 @@ def load_data():
     df["log_illiq"] = np.log(df["illiq_252d"]).replace(-np.inf, np.nan)
     df["month"] = df["date"].dt.to_period("M").astype(str)
 
-    # ── Term Structure columns (README_2 Part 2) ─────────────────────
+    # ── Short/long horizon Amihud columns (README_2 Part 2) ──────────
     # Source: daily 'illiq' column already in amihud_with_free_float.parquet
     #         (raw ILLIQ_t = |r_t| / dollar_volume_t, per src/calc_rolling_amihud.py)
     df = df.sort_values(["ticker", "date"])
@@ -1494,7 +1494,7 @@ to see where.
 |------|-----------|------|
 | **Amihud ILLIQ (252d)** | Rolling 252-day mean of daily \\|return\\| / $ volume. Higher = more illiquid. | Ratio (unitless) |
 | **log(Amihud)** | Natural log of ILLIQ 252d, used in regressions. | log-ratio |
-| **Amihud ILLIQ (21d)** | Rolling 21-day mean — the "short end" of the liquidity term structure. | Ratio |
+| **Amihud ILLIQ (21d)** | Rolling 21-day mean — short-horizon friction (recent trading conditions). | Ratio |
 | **Liquidity Z-Score** | (ILLIQ ratio − rolling mean) / rolling std. Cross-sectionally comparable stress signal. | Standard deviations |
 | **Free-Float % (FF%)** | Bloomberg `EQY_FREE_FLOAT_PCT` — share of outstanding stock publicly tradeable. | 0–100% |
 | **\\|Return\\|** | Absolute value of daily close-to-close return (e.g., 0.05 = 5%). | Decimal |
@@ -1546,10 +1546,21 @@ def page_staleness():
         ], className="g-3 mb-4"),
 
         dbc.Row([
-            dbc.Col(dcc.Graph(figure=fig_staleness_histogram(),
-                              config={"displayModeBar": False}), md=6),
-            dbc.Col(dcc.Graph(figure=fig_monthly_change_rate(),
-                              config={"displayModeBar": False}), md=6),
+            dbc.Col([
+                dcc.Graph(figure=fig_staleness_histogram(), config={"displayModeBar": False}),
+                html.P("Each bar = how many tickers had their longest FF% unchanged streak at that length. "
+                       "Red bars (6+ months) are the most concerning — these stocks had no FF% update for half the year or more.",
+                       style={"color": COLORS["text_muted"], "fontSize": "0.75rem", "textAlign": "center",
+                              "padding": "0 12px", "marginTop": "-8px"}),
+            ], md=6),
+            dbc.Col([
+                dcc.Graph(figure=fig_monthly_change_rate(), config={"displayModeBar": False}),
+                html.P("What fraction of tickers saw their FF% change vs the prior month. "
+                       "Low bars mean most stocks had no update that month. "
+                       "Spikes at quarter starts (Jan, Apr, Jul, Oct) suggest filing-driven updates.",
+                       style={"color": COLORS["text_muted"], "fontSize": "0.75rem", "textAlign": "center",
+                              "padding": "0 12px", "marginTop": "-8px"}),
+            ], md=6),
         ], className="mb-4"),
 
         dbc.Card(
@@ -1559,11 +1570,17 @@ def page_staleness():
                 dcc.Graph(figure=fig_staleness_vs_amihud_volatility(),
                           config={"displayModeBar": False}),
                 dcc.Markdown("""
-Many stocks with **high Amihud coefficient of variation** (meaning their liquidity conditions
-changed significantly throughout the year) had **unchanged free-float values for 6–12 months**.
-This is the blind spot: the free-float signal reports *no change* while actual trading liquidity
-is shifting meaningfully. Stocks in the upper-right corner are the most dangerous —
-genuinely volatile liquidity that static free-float completely misses.
+**Coefficient of Variation (CV)** = standard deviation / mean — a unitless measure of how
+much Amihud ILLIQ varied within the year for each stock. A CV of 0.5 means liquidity
+conditions swung by half the annual average; a CV near 0 means liquidity was stable all year.
+
+**What this shows:** Stocks in the **upper-right** corner had highly volatile liquidity
+(high CV) yet their free-float value never changed (long streak). This is where FF% fails
+most — it reports "no change" while actual trading friction is swinging significantly.
+
+**Is Amihud doing its job?** Yes — the wide vertical spread of CV values across all streak
+lengths proves Amihud *detects* liquidity variation that FF% completely misses. That's
+the operational case: if you rely only on FF%, you're blind to these shifts.
 """, style={"color": COLORS["text_muted"], "fontSize": "0.85rem", "lineHeight": 1.6,
             "marginTop": "12px"}),
             ]),
@@ -1604,10 +1621,17 @@ def page_horse_race():
         ], className="g-3 mb-4"),
 
         dcc.Graph(figure=fig_r2_horse_race(), config={"displayModeBar": False}),
-
-        html.Div(style={"height": "24px"}),
+        html.P("Longer bar = more variance explained. These are standalone (univariate) R² values — "
+               "no size control. Amihud's large advantage partly reflects its correlation with market cap.",
+               style={"color": COLORS["text_muted"], "fontSize": "0.75rem", "textAlign": "center",
+                      "padding": "0 40px", "marginTop": "-4px", "marginBottom": "16px"}),
 
         dcc.Graph(figure=fig_quintile_sorts(), config={"displayModeBar": False}),
+        html.P("Stocks ranked into 5 equal groups by each measure. A clear staircase from Q1 to Q5 "
+               "means the measure separates low-volatility from high-volatility stocks. No model needed — "
+               "this is a pure sort.",
+               style={"color": COLORS["text_muted"], "fontSize": "0.75rem", "textAlign": "center",
+                      "padding": "0 40px", "marginTop": "-4px", "marginBottom": "8px"}),
 
         dbc.Card(
             dbc.CardBody([
@@ -1735,6 +1759,10 @@ def page_size():
         ),
 
         dcc.Graph(figure=fig_size_tercile_r2(), config={"displayModeBar": False}),
+        html.P("Blue = Amihud, Orange = FF%. Within each size group, a taller bar = better predictor. "
+               "This removes the size confound — if Amihud still wins here, it's real microstructure signal.",
+               style={"color": COLORS["text_muted"], "fontSize": "0.75rem", "textAlign": "center",
+                      "padding": "0 40px", "marginTop": "-4px", "marginBottom": "8px"}),
 
         dbc.Card(
             dbc.CardBody([
@@ -1783,6 +1811,11 @@ def page_time():
         ),
 
         dcc.Graph(figure=fig_monthly_r2_lines(), config={"displayModeBar": False}),
+        html.P("Each point = R² for that month's data only (univariate, no size control). "
+               "If the blue line (Amihud) stays consistently above orange (FF%), the relationship "
+               "holds throughout the year — it's not driven by one volatile month.",
+               style={"color": COLORS["text_muted"], "fontSize": "0.75rem", "textAlign": "center",
+                      "padding": "0 40px", "marginTop": "-4px", "marginBottom": "8px"}),
 
         dbc.Card(
             dbc.CardBody([
@@ -1846,16 +1879,19 @@ def page_heatmap():
 
         dbc.Card(
             dbc.CardBody([
-                html.H5("Amihud Drives the Gradient", style={
+                html.H5("How to Read This", style={
                     "color": COLORS["accent_orange"], "fontWeight": 700, "marginBottom": "8px"}),
                 dcc.Markdown("""
-The dominant color gradient runs **vertically** (across Amihud quintiles), not horizontally
-(across Free-Float quintiles). This confirms that Amihud is the primary driver of return
-magnitude — even after conditioning on free-float levels.
+**If the color gradient runs vertically** (top-to-bottom), Amihud quintile drives returns
+more than free-float. **If horizontal** (left-to-right), free-float matters more.
 
-The top-right corner (high Amihud × low float) represents the most dangerous liquidity profile:
-stocks that are both illiquid by trading activity AND have limited public supply. These are
-the names most likely to experience extreme price dislocations.
+**Caveat:** Both Amihud and free-float correlate with market cap, so the gradients
+partly reflect size. The key question is whether any cell deviates from what
+size alone would predict — e.g., a low-Amihud / low-float stock that still moves a lot
+would suggest free-float captures something Amihud misses.
+
+**Upper-left corner** (high Amihud, low float) = highest risk: illiquid by trading
+activity AND limited public supply.
 """, style={"color": COLORS["text_muted"], "fontSize": "0.85rem", "lineHeight": 1.6}),
             ]),
             style={"backgroundColor": COLORS["card"], "border": f"1px solid {COLORS['card_border']}",
@@ -2391,9 +2427,19 @@ def page_regression_deep_dive():
 
         # Full spec bar chart
         dcc.Graph(figure=_fig_full_r2_specs(), config={"displayModeBar": False}),
+        html.P("Each bar = total R² for that model. The gap between MktCap Only and the kitchen "
+               "sink tells you how much all variables combined add. Note how little Amihud adds "
+               "beyond MktCap alone — they're nearly redundant.",
+               style={"color": COLORS["text_muted"], "fontSize": "0.75rem", "textAlign": "center",
+                      "padding": "0 40px", "marginTop": "-4px", "marginBottom": "16px"}),
 
         # ΔR² decomposition
         dcc.Graph(figure=_fig_delta_r2(), config={"displayModeBar": False}),
+        html.P("ΔR² = how much R² improves when adding this variable to the MktCap baseline. "
+               "A taller bar means more unique information beyond size. "
+               "If FF% bar is taller than Amihud, FF% adds more that size doesn't already capture.",
+               style={"color": COLORS["text_muted"], "fontSize": "0.75rem", "textAlign": "center",
+                      "padding": "0 40px", "marginTop": "-4px", "marginBottom": "16px"}),
 
         # Fama-MacBeth summary
         html.H4("Fama-MacBeth Cross-Sectional Test", style={
@@ -2465,7 +2511,7 @@ def _fig_full_r2_specs():
     fig.update_layout(
         template=PLOT_TEMPLATE,
         title=dict(text="All Six OLS Specifications", font=dict(size=18)),
-        height=450, margin=dict(l=50, r=80, t=60, b=50),
+        height=450, margin=dict(l=180, r=80, t=60, b=50),
     )
     fig.update_xaxes(title_text="R²")
     return fig
@@ -2579,6 +2625,10 @@ def page_extreme_moves():
 
         # Per-bucket recall comparison
         dcc.Graph(figure=_fig_extreme_bucket_comparison(er), config={"displayModeBar": False}),
+        html.P("Recall = what fraction of actual extreme moves did the model flag? "
+               "Higher is better. Blue (+ Amihud) should exceed orange (baseline) if the z-score adds value.",
+               style={"color": COLORS["text_muted"], "fontSize": "0.75rem", "textAlign": "center",
+                      "padding": "0 40px", "marginTop": "-4px", "marginBottom": "12px"}),
 
         # Confusion matrices side by side
         dbc.Row([
@@ -2587,6 +2637,10 @@ def page_extreme_moves():
             dbc.Col(dcc.Graph(figure=_fig_confusion(er["addon"]["confusion"], "Add-on (+ Amihud Z-Score)"),
                               config={"displayModeBar": False}), md=6),
         ], className="mb-3"),
+        html.P("Confusion matrix: rows = actual, columns = predicted. Bottom-left cell (Extreme predicted Not Extreme) "
+               "= false negatives — extreme moves the model missed. Fewer false negatives = better.",
+               style={"color": COLORS["text_muted"], "fontSize": "0.75rem", "textAlign": "center",
+                      "padding": "0 40px", "marginTop": "-4px", "marginBottom": "8px"}),
 
         dbc.Card(
             dbc.CardBody([
@@ -2689,6 +2743,11 @@ def page_asymmetry():
         ),
 
         dcc.Graph(figure=_fig_asymmetry_r2(ar), config={"displayModeBar": False}),
+        html.P("Bars = R² when the regression is run only on up days, only on down days, or all days. "
+               "If Amihud's R² is higher on down days than up days, it specifically captures "
+               "downside liquidity risk — the case that matters for risk management.",
+               style={"color": COLORS["text_muted"], "fontSize": "0.75rem", "textAlign": "center",
+                      "padding": "0 40px", "marginTop": "-4px", "marginBottom": "8px"}),
 
         dbc.Card(
             dbc.CardBody([
@@ -2988,11 +3047,12 @@ def _oos_tab_extreme(oos):
         ), row=1, col=col_idx)
 
     fig.update_layout(
-        template=PLOT_TEMPLATE, barmode="group", height=420,
+        template=PLOT_TEMPLATE, barmode="group", height=480,
         title=dict(text="Extreme Move Logistic: IS vs OOS", font=dict(size=18)),
-        legend=dict(orientation="h", yanchor="bottom", y=1.06, xanchor="center", x=0.5),
+        legend=dict(orientation="h", yanchor="bottom", y=1.10, xanchor="center", x=0.5),
+        margin=dict(t=90),
     )
-    fig.update_yaxes(title_text="Score", range=[0, 1])
+    fig.update_yaxes(title_text="Score", range=[0, 0.5])
 
     return dbc.Tab(label="Extreme Moves", children=[
         dcc.Graph(figure=fig, config={"displayModeBar": False}),
@@ -3206,7 +3266,7 @@ contribution: microstructure friction that static filing data cannot see.
 {staleness['never_changed_pct']:.0%} showed zero change across all 12 months.
 Amihud updates daily from live trading data.
 
-**5. The liquidity term structure is a genuine operational tool.**
+**5. The Amihud stress monitor is a genuine operational tool.**
 The 21-day / 252-day Amihud z-score provides a live, cross-sectionally comparable
 stress signal that free-float cannot offer at any frequency.
 
@@ -3554,7 +3614,7 @@ def update_ticker(ticker):
     return fig_ticker_detail(ticker)
 
 
-# ── Term Structure Callbacks ──
+# ── Stress Monitor Callbacks ──
 
 @callback(
     Output("ts-curve-chart", "figure"),
