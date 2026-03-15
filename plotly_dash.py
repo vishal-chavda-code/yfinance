@@ -839,7 +839,7 @@ def fig_r2_horse_race():
         template=PLOT_TEMPLATE,
         title=dict(text="Explanatory Power (R²): Which Proxy Wins?", font=dict(size=18)),
         height=420,
-        margin=dict(l=50, r=80, t=60, b=50),
+        margin=dict(l=180, r=80, t=60, b=50),
     )
     fig.update_xaxes(title_text="R²")
     return fig
@@ -2838,6 +2838,7 @@ def _oos_tab_ols_horse_race(oos):
         template=PLOT_TEMPLATE, barmode="group", height=500,
         title=dict(text="Model R²: Trained on 2025, Tested on 2026", font=dict(size=18)),
         legend=dict(orientation="h", yanchor="bottom", y=1.06, xanchor="center", x=0.5),
+        margin=dict(l=180),
     )
     fig.update_xaxes(title_text="R²")
 
