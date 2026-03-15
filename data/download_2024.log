@@ -1,0 +1,955 @@
+2026-03-14 15:37:28,524 [INFO] Loaded 6169 tickers from C:\Users\vmc30\OneDrive\Desktop\Personal_Repos\yfinance\data\ticker_universe.json
+2026-03-14 15:37:28,525 [INFO] Tickers: 6169 | Chunks: 124 | Already done: 0
+2026-03-14 15:37:28,525 [INFO] [1/124] chunk_0000 — 50 tickers: A...ACGLN
+2026-03-14 15:37:30,706 [ERROR] $AAPG: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:30,896 [ERROR] $ACCL: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:31,067 [ERROR] $AARD: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:31,199 [ERROR] $AACB: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:31,208 [ERROR] 
+4 Failed downloads:
+2026-03-14 15:37:31,208 [ERROR] ['AAPG', 'ACCL', 'AARD', 'AACB']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:33,045 [INFO] [2/124] chunk_0001 — 50 tickers: ACGLO...ADM
+2026-03-14 15:37:33,253 [ERROR] $ADAMG: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:33,372 [ERROR] $ADAMH: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:33,539 [ERROR] $ADAC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:33,704 [ERROR] $ADAMO: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:33,712 [ERROR] 
+4 Failed downloads:
+2026-03-14 15:37:33,712 [ERROR] ['ADAMG', 'ADAMH', 'ADAC', 'ADAMO']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:35,278 [INFO] [3/124] chunk_0002 — 50 tickers: ADMA...AFL
+2026-03-14 15:37:35,529 [ERROR] $AEAQ: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:35,701 [ERROR] $ADVB: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:35,879 [ERROR] $AEBI: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:35,879 [ERROR] $AEXA: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:35,886 [ERROR] $AERO: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:35,887 [ERROR] 
+5 Failed downloads:
+2026-03-14 15:37:35,887 [ERROR] ['AEAQ', 'ADVB', 'AEBI', 'AEXA', 'AERO']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:37,453 [INFO] [4/124] chunk_0003 — 50 tickers: AFRI...AIO
+2026-03-14 15:37:37,652 [ERROR] $AIIA: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:37,657 [ERROR] $AGH: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:37,658 [ERROR] $AIDX: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:37,669 [ERROR] $AHMA: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:37,827 [ERROR] $AII: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:37,835 [ERROR] $AGBK: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:37,835 [ERROR] $AGNCZ: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:38,026 [ERROR] $AGCC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:38,026 [ERROR] $AGMB: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:38,037 [ERROR] $AGRZ: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:38,120 [ERROR] 
+10 Failed downloads:
+2026-03-14 15:37:38,120 [ERROR] ['AIIA', 'AGH', 'AIDX', 'AHMA', 'AII', 'AGBK', 'AGNCZ', 'AGCC', 'AGMB', 'AGRZ']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:39,699 [INFO] [5/124] chunk_0004 — 50 tickers: AIOS...ALIS
+2026-03-14 15:37:39,937 [ERROR] $ALIS: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:40,039 [ERROR] $ALH: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:40,428 [ERROR] $AIRO: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:40,430 [ERROR] $AKTS: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:40,735 [ERROR] 
+4 Failed downloads:
+2026-03-14 15:37:40,735 [ERROR] ['ALIS', 'ALH', 'AIRO', 'AKTS']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:42,362 [INFO] [6/124] chunk_0005 — 50 tickers: ALIT...AMIX
+2026-03-14 15:37:42,877 [ERROR] $ALPS: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:42,877 [ERROR] $ALUB: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:43,298 [ERROR] $AMBQ: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:43,445 [ERROR] 
+3 Failed downloads:
+2026-03-14 15:37:43,445 [ERROR] ['ALPS', 'ALUB', 'AMBQ']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:45,040 [INFO] [7/124] chunk_0006 — 50 tickers: AMKR...ANTA
+2026-03-14 15:37:45,256 [ERROR] $ANDG: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:45,257 [ERROR] $ANTA: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:45,262 [ERROR] $ANPA: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:45,315 [ERROR] $AMPGZ: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01)
+2026-03-14 15:37:45,464 [ERROR] $ANGX: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:45,684 [ERROR] $AMRZ: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:45,714 [ERROR] 
+6 Failed downloads:
+2026-03-14 15:37:45,714 [ERROR] ['ANDG', 'ANTA', 'ANPA', 'ANGX', 'AMRZ']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:45,714 [ERROR] ['AMPGZ']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01)
+2026-03-14 15:37:47,293 [INFO] [8/124] chunk_0007 — 50 tickers: ANTX...AR
+2026-03-14 15:37:47,518 [ERROR] $APAD: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:47,520 [ERROR] $APAC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:47,539 [ERROR] $APC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:47,720 [ERROR] $APUS: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:47,741 [ERROR] $AOMD: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:47,963 [ERROR] $APXT: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:47,989 [ERROR] 
+6 Failed downloads:
+2026-03-14 15:37:47,989 [ERROR] ['APAD', 'APAC', 'APC', 'APUS', 'AOMD', 'APXT']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:49,573 [INFO] [9/124] chunk_0008 — 50 tickers: ARAI...ASBA
+2026-03-14 15:37:49,810 [ERROR] $ARAI: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:50,077 [ERROR] $ARX: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:50,301 [ERROR] $ARTC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:50,311 [ERROR] 
+3 Failed downloads:
+2026-03-14 15:37:50,311 [ERROR] ['ARAI', 'ARX', 'ARTC']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:51,895 [INFO] [10/124] chunk_0009 — 50 tickers: ASBP...ATLC
+2026-03-14 15:37:52,303 [ERROR] $ATHR: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:52,314 [ERROR] $ASPSZ: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:52,315 [ERROR] $ASPC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:52,462 [ERROR] $ATCX: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:52,643 [ERROR] $ATII: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:52,644 [ERROR] $ASIC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:52,669 [ERROR] 
+6 Failed downloads:
+2026-03-14 15:37:52,669 [ERROR] ['ATHR', 'ASPSZ', 'ASPC', 'ATCX', 'ATII', 'ASIC']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:54,254 [INFO] [11/124] chunk_0010 — 50 tickers: ATLCL...AVNW
+2026-03-14 15:37:54,527 [ERROR] $AVBC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:54,739 [ERROR] $AUGO: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:54,923 [ERROR] 
+2 Failed downloads:
+2026-03-14 15:37:54,923 [ERROR] ['AVBC', 'AUGO']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:56,536 [INFO] [12/124] chunk_0011 — 50 tickers: AVO...BALY
+2026-03-14 15:37:56,752 [ERROR] $AXIN: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:56,754 [ERROR] $BACC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:57,248 [ERROR] 
+2 Failed downloads:
+2026-03-14 15:37:57,248 [ERROR] ['AXIN', 'BACC']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:58,856 [INFO] [13/124] chunk_0012 — 50 tickers: BAM...BCG
+2026-03-14 15:37:59,069 [ERROR] $BCAR: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:59,084 [ERROR] $BBCQ: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:59,589 [ERROR] $BBNX: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:37:59,590 [ERROR] 
+3 Failed downloads:
+2026-03-14 15:37:59,590 [ERROR] ['BCAR', 'BBCQ', 'BBNX']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:01,163 [INFO] [14/124] chunk_0013 — 50 tickers: BCH...BFH
+2026-03-14 15:38:01,435 [ERROR] $BDCI: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:01,506 [ERROR] $BCTXL: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01)
+2026-03-14 15:38:01,926 [ERROR] $BCTXZ: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:01,930 [ERROR] $BETA: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:01,937 [ERROR] $BCSS: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:01,947 [ERROR] 
+5 Failed downloads:
+2026-03-14 15:38:01,947 [ERROR] ['BDCI', 'BCTXZ', 'BETA', 'BCSS']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:01,947 [ERROR] ['BCTXL']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01)
+2026-03-14 15:38:03,518 [INFO] [15/124] chunk_0014 — 50 tickers: BFLY...BIO-B
+2026-03-14 15:38:04,067 [ERROR] $BGIN: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:04,068 [ERROR] $BGSI: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:04,091 [ERROR] $BGL: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:04,298 [ERROR] $BIII: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:04,308 [ERROR] 
+4 Failed downloads:
+2026-03-14 15:38:04,308 [ERROR] ['BGIN', 'BGSI', 'BGL', 'BIII']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:05,886 [INFO] [16/124] chunk_0015 — 50 tickers: BIOA...BLRX
+2026-03-14 15:38:06,123 [ERROR] $BLLN: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:06,128 [ERROR] $BLIV: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:06,390 [ERROR] $BIXI: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:06,646 [ERROR] $BLRK: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:06,783 [ERROR] $BIYA: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:06,791 [ERROR] 
+5 Failed downloads:
+2026-03-14 15:38:06,791 [ERROR] ['BLLN', 'BLIV', 'BIXI', 'BLRK', 'BIYA']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:08,365 [INFO] [17/124] chunk_0016 — 50 tickers: BLSH...BOLT
+2026-03-14 15:38:08,628 [ERROR] $BLSH: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:08,628 [ERROR] $BOBS: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:08,629 [ERROR] $BMHL: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:08,828 [ERROR] $BMM: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:08,831 [ERROR] $BLUW: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:09,010 [ERROR] $BLZR: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:09,010 [ERROR] $BMGL: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:09,011 [ERROR] $BMNR: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:09,040 [ERROR] 
+8 Failed downloads:
+2026-03-14 15:38:09,040 [ERROR] ['BLSH', 'BOBS', 'BMHL', 'BMM', 'BLUW', 'BLZR', 'BMGL', 'BMNR']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:10,616 [INFO] [18/124] chunk_0017 — 50 tickers: BON...BRZE
+2026-03-14 15:38:10,820 [ERROR] $BRKRP: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:10,822 [ERROR] $BPRE: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:11,014 [ERROR] $BRAI: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:11,200 [ERROR] $BRR: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:11,203 [ERROR] $BRBI: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:11,226 [ERROR] $BRCB: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:11,227 [ERROR] $BPAC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:11,360 [ERROR] 
+7 Failed downloads:
+2026-03-14 15:38:11,360 [ERROR] ['BRKRP', 'BPRE', 'BRAI', 'BRR', 'BRBI', 'BRCB', 'BPAC']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:12,972 [INFO] [19/124] chunk_0018 — 50 tickers: BSAA...BVS
+2026-03-14 15:38:13,243 [ERROR] $BSAA: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:13,244 [ERROR] $BTQ: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:13,261 [ERROR] $BTTC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:13,267 [ERROR] $BUSEP: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:13,823 [ERROR] $BTGO: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:13,834 [ERROR] $BUDA: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:13,859 [ERROR] $BUUU: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:13,864 [ERROR] 
+7 Failed downloads:
+2026-03-14 15:38:13,864 [ERROR] ['BSAA', 'BTQ', 'BTTC', 'BUSEP', 'BTGO', 'BUDA', 'BUUU']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:15,464 [INFO] [20/124] chunk_0019 — 50 tickers: BW...CAL
+2026-03-14 15:38:15,680 [ERROR] $CAI: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:16,035 [ERROR] $CAEP: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:16,383 [ERROR] $CABR: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:16,389 [ERROR] 
+3 Failed downloads:
+2026-03-14 15:38:16,389 [ERROR] ['CAI', 'CAEP', 'CABR']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:18,036 [INFO] [21/124] chunk_0020 — 50 tickers: CALC...CC
+2026-03-14 15:38:18,348 [ERROR] $CARL: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:18,352 [ERROR] $CBC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:18,497 [ERROR] $CAST: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:18,510 [ERROR] $CBK: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:18,915 [ERROR] 
+4 Failed downloads:
+2026-03-14 15:38:18,915 [ERROR] ['CARL', 'CBC', 'CAST', 'CBK']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:20,510 [INFO] [22/124] chunk_0021 — 50 tickers: CCAP...CDZIP
+2026-03-14 15:38:20,727 [ERROR] $CCXI: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:20,741 [ERROR] $CCID: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:20,745 [ERROR] $CCII: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:20,750 [ERROR] $CDNL: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:21,279 [ERROR] $CCHH: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:21,285 [ERROR] 
+5 Failed downloads:
+2026-03-14 15:38:21,285 [ERROR] ['CCXI', 'CCID', 'CCII', 'CDNL', 'CCHH']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:22,896 [INFO] [23/124] chunk_0022 — 50 tickers: CE...CHAI
+2026-03-14 15:38:23,093 [ERROR] $CHA: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:23,110 [ERROR] $CFND: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:23,114 [ERROR] $CEPT: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:23,357 [ERROR] $CEPS: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:23,359 [ERROR] $CEPF: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:23,485 [ERROR] $CGCT: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:23,516 [ERROR] $CHAC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:23,526 [ERROR] $CEPO: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:23,546 [ERROR] $CEPV: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:23,572 [ERROR] 
+9 Failed downloads:
+2026-03-14 15:38:23,572 [ERROR] ['CHA', 'CFND', 'CEPT', 'CEPS', 'CEPF', 'CGCT', 'CHAC', 'CEPO', 'CEPV']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:25,158 [INFO] [24/124] chunk_0023 — 50 tickers: CHAR...CIM
+2026-03-14 15:38:25,339 [ERROR] $CHPG: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:25,348 [ERROR] $CIGL: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:25,349 [ERROR] $CHEC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:25,357 [ERROR] $CHOW: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:25,475 [ERROR] $CICC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:25,478 [ERROR] $CHYM: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:25,955 [ERROR] 
+6 Failed downloads:
+2026-03-14 15:38:25,955 [ERROR] ['CHPG', 'CIGL', 'CHEC', 'CHOW', 'CICC', 'CHYM']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:27,546 [INFO] [25/124] chunk_0024 — 50 tickers: CIMN...CMBM
+2026-03-14 15:38:28,023 [ERROR] $CIMP: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:28,068 [ERROR] $CJMB: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:28,261 [ERROR] $CITR: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:28,310 [ERROR] 
+3 Failed downloads:
+2026-03-14 15:38:28,310 [ERROR] ['CIMP', 'CJMB', 'CITR']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:29,901 [INFO] [26/124] chunk_0025 — 50 tickers: CMBT...CNS
+2026-03-14 15:38:30,164 [ERROR] $CMDB: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:30,353 [ERROR] $CMII: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:30,603 [ERROR] 
+2 Failed downloads:
+2026-03-14 15:38:30,603 [ERROR] ['CMDB', 'CMII']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:32,197 [INFO] [27/124] chunk_0026 — 50 tickers: CNSP...CPA
+2026-03-14 15:38:32,424 [ERROR] $COLA: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:32,426 [ERROR] $COPL: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:32,839 [ERROR] $COSO: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:32,853 [ERROR] $CORZZ: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:32,871 [ERROR] 
+4 Failed downloads:
+2026-03-14 15:38:32,871 [ERROR] ['COLA', 'COPL', 'COSO', 'CORZZ']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:34,484 [INFO] [28/124] chunk_0027 — 50 tickers: CPAC...CRM
+2026-03-14 15:38:34,724 [ERROR] $CRE: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:34,984 [ERROR] $CRCL: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:35,150 [ERROR] $CRAC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:35,155 [ERROR] $CRAQ: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:35,155 [ERROR] $CRAN: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:35,170 [ERROR] 
+5 Failed downloads:
+2026-03-14 15:38:35,170 [ERROR] ['CRE', 'CRCL', 'CRAC', 'CRAQ', 'CRAN']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:36,762 [INFO] [29/124] chunk_0028 — 50 tickers: CRMD...CTNT
+2026-03-14 15:38:36,977 [ERROR] $CRWV: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:37,499 [ERROR] $CSAI: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:37,509 [ERROR] 
+2 Failed downloads:
+2026-03-14 15:38:37,509 [ERROR] ['CRWV', 'CSAI']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:39,093 [INFO] [30/124] chunk_0029 — 50 tickers: CTO...CWAN
+2026-03-14 15:38:39,297 [ERROR] $CUPR: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:39,324 [ERROR] $CTW: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:39,600 [ERROR] $CURX: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:39,815 [ERROR] $CV: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:39,835 [ERROR] 
+4 Failed downloads:
+2026-03-14 15:38:39,835 [ERROR] ['CUPR', 'CTW', 'CURX', 'CV']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:41,424 [INFO] [31/124] chunk_0030 — 50 tickers: CWBC...DBRG
+2026-03-14 15:38:41,721 [ERROR] $DBCA: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:42,011 [ERROR] $DAAQ: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:42,026 [ERROR] $CYCU: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:42,041 [ERROR] $DAIC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:42,172 [ERROR] 
+4 Failed downloads:
+2026-03-14 15:38:42,172 [ERROR] ['DBCA', 'DAAQ', 'CYCU', 'DAIC']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:43,759 [INFO] [32/124] chunk_0031 — 50 tickers: DBVT...DHCNI
+2026-03-14 15:38:44,425 [ERROR] $DGNX: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:44,493 [ERROR] 
+1 Failed download:
+2026-03-14 15:38:44,493 [ERROR] ['DGNX']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:46,124 [INFO] [33/124] chunk_0032 — 50 tickers: DHCNL...DNUT
+2026-03-14 15:38:46,235 [ERROR] $DHCNL: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01)
+2026-03-14 15:38:46,379 [ERROR] $DMII: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:46,720 [ERROR] $DLXY: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:46,866 [ERROR] $DNMX: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:46,898 [ERROR] $DMAA: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:46,900 [ERROR] $DKI: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:46,924 [ERROR] 
+6 Failed downloads:
+2026-03-14 15:38:46,924 [ERROR] ['DHCNL']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01)
+2026-03-14 15:38:46,924 [ERROR] ['DMII', 'DLXY', 'DNMX', 'DMAA', 'DKI']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:48,518 [INFO] [34/124] chunk_0033 — 50 tickers: DOC...DTI
+2026-03-14 15:38:49,026 [ERROR] $DSAC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:49,038 [ERROR] $DRDB: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:49,271 [ERROR] 
+2 Failed downloads:
+2026-03-14 15:38:49,271 [ERROR] ['DSAC', 'DRDB']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:50,909 [INFO] [35/124] chunk_0034 — 50 tickers: DTIL...ECCC
+2026-03-14 15:38:51,139 [ERROR] $DYOR: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:51,144 [ERROR] $EAI: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:51,155 [ERROR] $DTK: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:51,163 [ERROR] $DXF: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:51,478 [ERROR] $DXST: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:51,793 [ERROR] 
+5 Failed downloads:
+2026-03-14 15:38:51,793 [ERROR] ['DYOR', 'EAI', 'DTK', 'DXF', 'DXST']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:53,381 [INFO] [36/124] chunk_0035 — 50 tickers: ECCU...EHLD
+2026-03-14 15:38:53,669 [ERROR] $EHLD: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:53,886 [ERROR] $EDHL: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:54,086 [ERROR] 
+2 Failed downloads:
+2026-03-14 15:38:54,086 [ERROR] ['EHLD', 'EDHL']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:55,668 [INFO] [37/124] chunk_0036 — 50 tickers: EHTH...EMPD
+2026-03-14 15:38:55,932 [ERROR] $ELOG: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:55,937 [ERROR] $EMAT: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:55,943 [ERROR] $ELVR: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:56,161 [ERROR] $ELWT: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:56,165 [ERROR] $EIKN: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:56,314 [ERROR] $EMP: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:56,314 [ERROR] $EMIS: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:56,475 [ERROR] 
+7 Failed downloads:
+2026-03-14 15:38:56,475 [ERROR] ['ELOG', 'EMAT', 'ELVR', 'ELWT', 'EIKN', 'EMP', 'EMIS']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:58,090 [INFO] [38/124] chunk_0037 — 50 tickers: EMR...EQT
+2026-03-14 15:38:58,383 [ERROR] $EQPT: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:58,622 [ERROR] $EPSM: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:58,856 [ERROR] $ENGS: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:38:58,858 [ERROR] 
+3 Failed downloads:
+2026-03-14 15:38:58,858 [ERROR] ['EQPT', 'EPSM', 'ENGS']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:00,440 [INFO] [39/124] chunk_0038 — 50 tickers: EQX...EVC
+2026-03-14 15:39:01,106 [ERROR] $EVAC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:01,107 [ERROR] $ETOR: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:01,144 [ERROR] $ETS: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:01,153 [ERROR] 
+3 Failed downloads:
+2026-03-14 15:39:01,153 [ERROR] ['EVAC', 'ETOR', 'ETS']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:02,745 [INFO] [40/124] chunk_0039 — 50 tickers: EVCM...FACT
+2026-03-14 15:39:03,059 [ERROR] $EVMN: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:03,448 [ERROR] $EVOX: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:03,490 [ERROR] 
+2 Failed downloads:
+2026-03-14 15:39:03,490 [ERROR] ['EVMN', 'EVOX']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:05,078 [INFO] [41/124] chunk_0040 — 50 tickers: FAF...FEAM
+2026-03-14 15:39:05,381 [ERROR] $FCNCN: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:05,519 [ERROR] $FBGL: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:05,823 [ERROR] $FCHL: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:05,826 [ERROR] $FCRS: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:05,838 [ERROR] $FATN: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:05,847 [ERROR] 
+5 Failed downloads:
+2026-03-14 15:39:05,847 [ERROR] ['FCNCN', 'FBGL', 'FCHL', 'FCRS', 'FATN']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:07,513 [INFO] [42/124] chunk_0041 — 50 tickers: FEBO...FISV
+2026-03-14 15:39:07,762 [ERROR] $FGMC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:07,765 [ERROR] $FIGR: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:07,766 [ERROR] $FGSN: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:08,237 [ERROR] $FIG: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:08,247 [ERROR] $FGII: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:08,247 [ERROR] $FERA: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:08,253 [ERROR] 
+6 Failed downloads:
+2026-03-14 15:39:08,253 [ERROR] ['FGMC', 'FIGR', 'FGSN', 'FIG', 'FGII', 'FERA']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:09,857 [INFO] [43/124] chunk_0042 — 50 tickers: FITB...FNKO
+2026-03-14 15:39:10,082 [ERROR] $FITBM: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:10,084 [ERROR] $FJET: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:10,253 [ERROR] $FLY: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:10,492 [ERROR] $FLOC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:10,618 [ERROR] $FMFC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:10,620 [ERROR] 
+5 Failed downloads:
+2026-03-14 15:39:10,620 [ERROR] ['FITBM', 'FJET', 'FLY', 'FLOC', 'FMFC']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:12,218 [INFO] [44/124] chunk_0043 — 50 tickers: FNLC...FSK
+2026-03-14 15:39:12,476 [ERROR] $FPS: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:12,969 [ERROR] $FRMI: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:12,970 [ERROR] $FOFO: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:12,975 [ERROR] 
+3 Failed downloads:
+2026-03-14 15:39:12,975 [ERROR] ['FPS', 'FRMI', 'FOFO']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:14,583 [INFO] [45/124] chunk_0044 — 50 tickers: FSLR...FWONA
+2026-03-14 15:39:14,764 [ERROR] $FSSL: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:15,069 [ERROR] $FVAV: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:15,225 [ERROR] $FTRK: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:15,236 [ERROR] 
+3 Failed downloads:
+2026-03-14 15:39:15,236 [ERROR] ['FSSL', 'FVAV', 'FTRK']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:16,829 [INFO] [46/124] chunk_0045 — 50 tickers: FWONK...GDRX
+2026-03-14 15:39:17,107 [ERROR] $GAING: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:17,554 [ERROR] $GCDT: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:17,827 [ERROR] 
+2 Failed downloads:
+2026-03-14 15:39:17,827 [ERROR] ['GAING', 'GCDT']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:19,395 [INFO] [47/124] chunk_0046 — 50 tickers: GDS...GHY
+2026-03-14 15:39:19,684 [ERROR] $GEMI: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:19,896 [ERROR] $GECCG: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:20,080 [ERROR] $GENB: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:20,128 [ERROR] 
+3 Failed downloads:
+2026-03-14 15:39:20,129 [ERROR] ['GEMI', 'GECCG', 'GENB']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:21,717 [INFO] [48/124] chunk_0047 — 50 tickers: GIB...GME
+2026-03-14 15:39:21,978 [ERROR] $GIW: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:22,261 [ERROR] $GLOO: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:22,836 [ERROR] $GLXY: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:22,837 [ERROR] $GLIBK: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:22,844 [ERROR] $GLIBA: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:22,849 [ERROR] 
+5 Failed downloads:
+2026-03-14 15:39:22,849 [ERROR] ['GIW', 'GLOO', 'GLXY', 'GLIBK', 'GLIBA']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:24,544 [INFO] [49/124] chunk_0048 — 50 tickers: GMED...GRAB
+2026-03-14 15:39:25,095 [ERROR] $GPAC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:25,306 [ERROR] $GOAI: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:25,365 [ERROR] 
+2 Failed downloads:
+2026-03-14 15:39:25,365 [ERROR] ['GPAC', 'GOAI']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:26,960 [INFO] [50/124] chunk_0049 — 50 tickers: GRAF...GTM
+2026-03-14 15:39:27,226 [ERROR] $GTERA: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:27,252 [ERROR] $GSHR: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:27,691 [ERROR] $GSRF: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:27,692 [ERROR] $GTEN: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:27,701 [ERROR] $GRAN: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:27,739 [ERROR] 
+5 Failed downloads:
+2026-03-14 15:39:27,740 [ERROR] ['GTERA', 'GSHR', 'GSRF', 'GTEN', 'GRAN']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:29,348 [INFO] [51/124] chunk_0050 — 50 tickers: GTN...HCI
+2026-03-14 15:39:29,582 [ERROR] $HCHL: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:29,586 [ERROR] $HCAC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:29,790 [ERROR] $HBANZ: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:29,931 [ERROR] $HAVA: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:30,056 [ERROR] $HBNB: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:30,057 [ERROR] $HCAI: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:30,074 [ERROR] 
+6 Failed downloads:
+2026-03-14 15:39:30,074 [ERROR] ['HCHL', 'HCAC', 'HBANZ', 'HAVA', 'HBNB', 'HCAI']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:31,667 [INFO] [52/124] chunk_0051 — 50 tickers: HCKT...HKPD
+2026-03-14 15:39:31,989 [ERROR] $HCMA: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:32,433 [ERROR] $HKPD: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:32,453 [ERROR] 
+2 Failed downloads:
+2026-03-14 15:39:32,453 [ERROR] ['HCMA', 'HKPD']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:34,051 [INFO] [53/124] chunk_0052 — 50 tickers: HL...HQL
+2026-03-14 15:39:34,288 [ERROR] $HLXC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:34,528 [ERROR] $HNGE: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:34,730 [ERROR] $HMR: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:34,734 [ERROR] 
+3 Failed downloads:
+2026-03-14 15:39:34,734 [ERROR] ['HLXC', 'HNGE', 'HMR']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:36,303 [INFO] [54/124] chunk_0053 — 50 tickers: HQY...HURN
+2026-03-14 15:39:36,721 [ERROR] $HTFL: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:36,730 [ERROR] $HSLV: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:36,734 [ERROR] $HSPT: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:36,983 [ERROR] 
+3 Failed downloads:
+2026-03-14 15:39:36,983 [ERROR] ['HTFL', 'HSLV', 'HSPT']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:38,552 [INFO] [55/124] chunk_0054 — 50 tickers: HUT...ICG
+2026-03-14 15:39:38,800 [ERROR] $HXHX: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:38,891 [ERROR] $HVII: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:38,892 [ERROR] $HYNE: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:39,164 [ERROR] $HVMC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:39,348 [ERROR] 
+4 Failed downloads:
+2026-03-14 15:39:39,348 [ERROR] ['HXHX', 'HVII', 'HYNE', 'HVMC']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:41,008 [INFO] [56/124] chunk_0055 — 50 tickers: ICHR...ILPT
+2026-03-14 15:39:41,497 [ERROR] $IGAC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:41,506 [ERROR] $IEAG: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:41,717 [ERROR] 
+2 Failed downloads:
+2026-03-14 15:39:41,717 [ERROR] ['IGAC', 'IEAG']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:43,345 [INFO] [57/124] chunk_0056 — 50 tickers: IMA...INMD
+2026-03-14 15:39:43,577 [ERROR] $INAC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:44,043 [ERROR] $INLF: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:44,044 [ERROR] $INFQ: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:44,059 [ERROR] 
+3 Failed downloads:
+2026-03-14 15:39:44,059 [ERROR] ['INAC', 'INLF', 'INFQ']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:45,652 [INFO] [58/124] chunk_0057 — 50 tickers: INN...IPX
+2026-03-14 15:39:45,859 [ERROR] $IOTR: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:45,863 [ERROR] $IPEX: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:45,868 [ERROR] $IPCX: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:46,298 [ERROR] $IPOD: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:46,314 [ERROR] $INR: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:46,357 [ERROR] 
+5 Failed downloads:
+2026-03-14 15:39:46,357 [ERROR] ['IOTR', 'IPEX', 'IPCX', 'IPOD', 'INR']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:47,947 [INFO] [59/124] chunk_0058 — 50 tickers: IQ...IZEA
+2026-03-14 15:39:48,442 [ERROR] $IRHO: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:48,450 [ERROR] $IRAB: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:48,598 [ERROR] $ITHA: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:49,297 [ERROR] 
+3 Failed downloads:
+2026-03-14 15:39:49,297 [ERROR] ['IRHO', 'IRAB', 'ITHA']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:50,889 [INFO] [60/124] chunk_0059 — 50 tickers: IZM...JLL
+2026-03-14 15:39:51,186 [ERROR] $JFB: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:51,189 [ERROR] $JACS: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:51,425 [ERROR] $JBS: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:51,428 [ERROR] $JCAP: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:51,624 [ERROR] $JEM: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:51,627 [ERROR] $JAGU: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:51,630 [ERROR] $JLHL: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:51,630 [ERROR] $JENA: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:51,701 [ERROR] 
+8 Failed downloads:
+2026-03-14 15:39:51,701 [ERROR] ['JFB', 'JACS', 'JBS', 'JCAP', 'JEM', 'JAGU', 'JLHL', 'JENA']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:53,280 [INFO] [61/124] chunk_0060 — 50 tickers: JLS...KELYB
+2026-03-14 15:39:53,484 [ERROR] $KDK: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:53,871 [ERROR] $KCHV: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:54,055 [ERROR] $KBON: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:54,070 [ERROR] 
+3 Failed downloads:
+2026-03-14 15:39:54,070 [ERROR] ['KDK', 'KCHV', 'KBON']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:55,643 [INFO] [62/124] chunk_0061 — 50 tickers: KEN...KNSL
+2026-03-14 15:39:55,871 [ERROR] $KFII: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:56,067 [ERROR] $KIDZ: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:56,074 [ERROR] $KLAR: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:56,076 [ERROR] $KKRT: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:56,301 [ERROR] $KMRK: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:56,305 [ERROR] $KNRX: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:56,310 [ERROR] $KMTS: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:56,374 [ERROR] 
+7 Failed downloads:
+2026-03-14 15:39:56,374 [ERROR] ['KFII', 'KIDZ', 'KLAR', 'KKRT', 'KMRK', 'KNRX', 'KMTS']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:58,010 [INFO] [63/124] chunk_0062 — 50 tickers: KNTK...KVUE
+2026-03-14 15:39:58,465 [ERROR] $KRSP: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:58,474 [ERROR] $KTWO: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:58,478 [ERROR] $KRMN: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:58,808 [ERROR] $KOYN: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:39:58,818 [ERROR] 
+4 Failed downloads:
+2026-03-14 15:39:58,819 [ERROR] ['KRSP', 'KTWO', 'KRMN', 'KOYN']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:00,427 [INFO] [64/124] chunk_0063 — 50 tickers: KVYO...LCUT
+2026-03-14 15:40:00,689 [ERROR] $LCCC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:00,690 [ERROR] $KWM: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:00,929 [ERROR] $LBRX: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:01,161 [ERROR] $LATA: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:01,181 [ERROR] 
+4 Failed downloads:
+2026-03-14 15:40:01,181 [ERROR] ['LCCC', 'KWM', 'LBRX', 'LATA']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:02,803 [INFO] [65/124] chunk_0064 — 50 tickers: LDI...LIF
+2026-03-14 15:40:03,022 [ERROR] $LHAI: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:03,024 [ERROR] $LFS: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:03,392 [ERROR] $LHSW: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:03,404 [ERROR] $LGN: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:03,431 [ERROR] $LGPS: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:03,437 [ERROR] $LFAC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:03,483 [ERROR] 
+6 Failed downloads:
+2026-03-14 15:40:03,483 [ERROR] ['LHAI', 'LFS', 'LHSW', 'LGN', 'LGPS', 'LFAC']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:05,093 [INFO] [66/124] chunk_0065 — 50 tickers: LIFE...LODE
+2026-03-14 15:40:05,367 [ERROR] $LIMN: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:05,371 [ERROR] $LMRI: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:05,639 [ERROR] $LIFE: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:05,828 [ERROR] $LKSP: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:05,834 [ERROR] 
+4 Failed downloads:
+2026-03-14 15:40:05,834 [ERROR] ['LIMN', 'LMRI', 'LIFE', 'LKSP']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:07,419 [INFO] [67/124] chunk_0066 — 50 tickers: LOGI...LUMN
+2026-03-14 15:40:07,908 [ERROR] $LPCV: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:07,911 [ERROR] $LOKV: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:08,189 [ERROR] $LUD: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:08,190 [ERROR] 
+3 Failed downloads:
+2026-03-14 15:40:08,190 [ERROR] ['LPCV', 'LOKV', 'LUD']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:09,756 [INFO] [68/124] chunk_0067 — 50 tickers: LUNG...MAS
+2026-03-14 15:40:09,994 [ERROR] $LWAC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:10,169 [ERROR] $LZMH: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:10,179 [ERROR] $MANE: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:10,406 [ERROR] 
+3 Failed downloads:
+2026-03-14 15:40:10,406 [ERROR] ['LWAC', 'LZMH', 'MANE']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:11,975 [INFO] [69/124] chunk_0068 — 50 tickers: MASI...MCS
+2026-03-14 15:40:12,150 [ERROR] $MCHPP: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:12,156 [ERROR] $MBVI: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:12,157 [ERROR] $MAZE: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:12,158 [ERROR] $MCRP: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:12,158 [ERROR] $MCGA: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:12,422 [ERROR] $MASK: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:12,528 [ERROR] $MB: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:12,638 [ERROR] 
+8 Failed downloads:
+2026-03-14 15:40:12,638 [ERROR] ['MCHPP', 'MBVI', 'MAZE', 'MCRP', 'MCGA', 'MASK', 'MB']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:12,638 [ERROR] ['MBNKO']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:40:14,257 [INFO] [70/124] chunk_0069 — 50 tickers: MCW...MG
+2026-03-14 15:40:14,365 [ERROR] $MFICL: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01)
+2026-03-14 15:40:14,510 [ERROR] $MENS: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:14,663 [ERROR] $MESH: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:14,963 [ERROR] $MEHA: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:14,971 [ERROR] 
+7 Failed downloads:
+2026-03-14 15:40:14,971 [ERROR] ['MFICL']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01)
+2026-03-14 15:40:14,971 [ERROR] ['MEVO', 'METCI', 'MDLN']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:40:14,971 [ERROR] ['MENS', 'MESH', 'MEHA']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:16,546 [INFO] [71/124] chunk_0070 — 50 tickers: MGA...MKDW
+2026-03-14 15:40:17,060 [ERROR] $MINE: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:17,182 [ERROR] $MICC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:17,265 [ERROR] $MGRT: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:17,340 [ERROR] 
+7 Failed downloads:
+2026-03-14 15:40:17,340 [ERROR] ['MH', 'MGN', 'MIAX', 'MIMI']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:40:17,340 [ERROR] ['MINE', 'MICC', 'MGRT']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:18,971 [INFO] [72/124] chunk_0071 — 50 tickers: MKL...MOB
+2026-03-14 15:40:19,661 [ERROR] $MMED: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:19,661 [ERROR] $MNTN: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:19,662 [ERROR] 
+5 Failed downloads:
+2026-03-14 15:40:19,662 [ERROR] ['MLCIL', 'MKLY', 'MLAC']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:40:19,662 [ERROR] ['MMED', 'MNTN']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:21,238 [INFO] [73/124] chunk_0072 — 50 tickers: MOBX...MSBIP
+2026-03-14 15:40:21,987 [ERROR] 
+2 Failed downloads:
+2026-03-14 15:40:21,987 [ERROR] ['MPLT', 'MRP']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:40:23,676 [INFO] [74/124] chunk_0073 — 50 tickers: MSC...MUX
+2026-03-14 15:40:24,503 [ERROR] 
+2 Failed downloads:
+2026-03-14 15:40:24,503 [ERROR] ['MSIF', 'MSGY']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:40:26,106 [INFO] [75/124] chunk_0074 — 50 tickers: MVBF...NBB
+2026-03-14 15:40:26,387 [ERROR] $NAVN: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:26,858 [ERROR] 
+4 Failed downloads:
+2026-03-14 15:40:26,858 [ERROR] ['NAMM', 'MWYN', 'MWH']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:40:26,858 [ERROR] ['NAVN']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:28,450 [INFO] [76/124] chunk_0075 — 50 tickers: NBBK...NET
+2026-03-14 15:40:29,183 [ERROR] 
+1 Failed download:
+2026-03-14 15:40:29,183 [ERROR] ['NCT']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:40:30,768 [INFO] [77/124] chunk_0076 — 50 tickers: NEU...NKTR
+2026-03-14 15:40:31,506 [ERROR] $NKLR: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:31,577 [ERROR] 
+4 Failed downloads:
+2026-03-14 15:40:31,577 [ERROR] ['NIQ', 'NEWTP', 'NHIC']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:40:31,577 [ERROR] ['NKLR']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:33,148 [INFO] [78/124] chunk_0077 — 50 tickers: NKTX...NPAC
+2026-03-14 15:40:33,606 [ERROR] $NPAC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:33,608 [ERROR] $NOMA: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:33,610 [ERROR] $NMAX: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:33,623 [ERROR] $NP: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:33,784 [ERROR] $NOEM: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:33,784 [ERROR] 
+7 Failed downloads:
+2026-03-14 15:40:33,784 [ERROR] ['NMP', 'NNNN']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:40:33,784 [ERROR] ['NPAC', 'NOMA', 'NMAX', 'NP', 'NOEM']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:35,366 [INFO] [79/124] chunk_0078 — 50 tickers: NPB...NTRB
+2026-03-14 15:40:35,529 [ERROR] $NPT: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:35,862 [ERROR] $NTHI: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:36,073 [ERROR] 
+4 Failed downloads:
+2026-03-14 15:40:36,073 [ERROR] ['NPB', 'NSRX']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:40:36,073 [ERROR] ['NPT', 'NTHI']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:37,643 [INFO] [80/124] chunk_0079 — 50 tickers: NTRP...NWSA
+2026-03-14 15:40:38,605 [ERROR] $NWAX: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:38,621 [ERROR] 
+3 Failed downloads:
+2026-03-14 15:40:38,621 [ERROR] ['NUCL', 'NTSK']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:40:38,621 [ERROR] ['NWAX']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:40,238 [INFO] [81/124] chunk_0080 — 50 tickers: NWTG...ODD
+2026-03-14 15:40:41,004 [ERROR] 
+2 Failed downloads:
+2026-03-14 15:40:41,004 [ERROR] ['OBAI', 'OBA']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:40:42,621 [INFO] [82/124] chunk_0081 — 50 tickers: ODFL...ON
+2026-03-14 15:40:43,061 [ERROR] $OFRM: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:43,074 [ERROR] $OFSSO: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:43,075 [ERROR] $OIM: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:43,310 [ERROR] $OMDA: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:43,375 [ERROR] 
+7 Failed downloads:
+2026-03-14 15:40:43,375 [ERROR] ['OFAL', 'ODVWZ', 'OMSE']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:40:43,375 [ERROR] ['OFRM', 'OFSSO', 'OIM', 'OMDA']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:44,999 [INFO] [83/124] chunk_0082 — 50 tickers: ONB...ORIS
+2026-03-14 15:40:45,495 [ERROR] $ORIQ: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:45,737 [ERROR] 
+4 Failed downloads:
+2026-03-14 15:40:45,737 [ERROR] ['OPENL', 'ONCH', 'OPENZ']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:40:45,737 [ERROR] ['ORIQ']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:47,344 [INFO] [84/124] chunk_0083 — 50 tickers: ORKA...OXSQH
+2026-03-14 15:40:47,980 [ERROR] $OTH: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:47,995 [ERROR] $OWLS: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:47,996 [ERROR] $OTGA: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:48,005 [ERROR] $OXSQH: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:48,069 [ERROR] 
+7 Failed downloads:
+2026-03-14 15:40:48,069 [ERROR] ['OXLCG', 'OUSTZ', 'OTF']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:40:48,069 [ERROR] ['OTH', 'OWLS', 'OTGA', 'OXSQH']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:49,661 [INFO] [85/124] chunk_0084 — 50 tickers: OXY...PBT
+2026-03-14 15:40:50,410 [ERROR] $PAII: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:50,423 [ERROR] 
+4 Failed downloads:
+2026-03-14 15:40:50,423 [ERROR] ['PARK', 'PACH', 'PASW']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:40:50,423 [ERROR] ['PAII']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:52,058 [INFO] [86/124] chunk_0085 — 50 tickers: PBYI...PERI
+2026-03-14 15:40:52,715 [ERROR] $PCAP: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:52,718 [ERROR] $PELI: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:52,723 [ERROR] 
+3 Failed downloads:
+2026-03-14 15:40:52,723 [ERROR] ['PCLA']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:40:52,723 [ERROR] ['PCAP', 'PELI']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:54,335 [INFO] [87/124] chunk_0086 — 50 tickers: PESI...PINE
+2026-03-14 15:40:54,773 [ERROR] $PICS: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:54,790 [ERROR] $PHOE: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:55,099 [ERROR] 
+5 Failed downloads:
+2026-03-14 15:40:55,099 [ERROR] ['PFSA', 'PGAC', 'PFAI']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:40:55,099 [ERROR] ['PICS', 'PHOE']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:56,686 [INFO] [88/124] chunk_0087 — 50 tickers: PINS...PMTR
+2026-03-14 15:40:56,902 [ERROR] $PMTR: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:56,905 [ERROR] $PLMK: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:57,296 [ERROR] $PLUT: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:57,360 [ERROR] $PLBL: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:57,398 [ERROR] 
+7 Failed downloads:
+2026-03-14 15:40:57,398 [ERROR] ['PLYX', 'PMI', 'PLSM']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:40:57,398 [ERROR] ['PMTR', 'PLMK', 'PLUT', 'PLBL']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:58,993 [INFO] [89/124] chunk_0088 — 50 tickers: PMTS...PRE
+2026-03-14 15:40:59,227 [ERROR] $POAS: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:59,455 [ERROR] $PMTV: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:59,464 [ERROR] $PN: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:59,693 [ERROR] $POM: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:40:59,709 [ERROR] 
+7 Failed downloads:
+2026-03-14 15:40:59,709 [ERROR] ['PPHC', 'PPLC', 'PMTW']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:40:59,709 [ERROR] ['POAS', 'PMTV', 'PN', 'POM']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:01,327 [INFO] [90/124] chunk_0089 — 50 tickers: PRFX...PSTG
+2026-03-14 15:41:03,583 [INFO] [91/124] chunk_0090 — 50 tickers: PSTL...QNCX
+2026-03-14 15:41:03,766 [ERROR] $PURR: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:03,767 [ERROR] $PTRN: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:04,226 [ERROR] 
+5 Failed downloads:
+2026-03-14 15:41:04,226 [ERROR] ['Q', 'PXED', 'QNC']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:41:04,226 [ERROR] ['PURR', 'PTRN']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:05,838 [INFO] [92/124] chunk_0091 — 50 tickers: QNRX...RBNE
+2026-03-14 15:41:06,082 [ERROR] $RAC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:06,082 [ERROR] $RAL: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:06,217 [ERROR] $RAAQ: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:06,217 [ERROR] $QUMS: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:07,222 [ERROR] $RANG: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:07,223 [ERROR] 
+8 Failed downloads:
+2026-03-14 15:41:07,223 [ERROR] ['RBNE', 'QSEA', 'RAIN']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:41:07,223 [ERROR] ['RAC', 'RAL', 'RAAQ', 'QUMS', 'RANG']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:08,837 [INFO] [93/124] chunk_0092 — 50 tickers: RBRK...RENT
+2026-03-14 15:41:09,528 [ERROR] 
+2 Failed downloads:
+2026-03-14 15:41:09,528 [ERROR] ['RCT', 'RDAG']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:41:11,121 [INFO] [94/124] chunk_0093 — 50 tickers: RENX...RIOT
+2026-03-14 15:41:11,369 [ERROR] $RFAM: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:11,776 [ERROR] 
+4 Failed downloads:
+2026-03-14 15:41:11,777 [ERROR] ['RHLD', 'RGNT', 'RIBB']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:41:11,777 [ERROR] ['RFAM']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:13,350 [INFO] [95/124] chunk_0094 — 50 tickers: RITM...ROIV
+2026-03-14 15:41:14,108 [ERROR] $ROC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:14,147 [ERROR] 
+3 Failed downloads:
+2026-03-14 15:41:14,147 [ERROR] ['RNGT', 'RNA']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:41:14,148 [ERROR] ['ROC']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:15,737 [INFO] [96/124] chunk_0095 — 50 tickers: ROK...RWAYI
+2026-03-14 15:41:15,987 [ERROR] $RTAC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:16,485 [ERROR] 
+5 Failed downloads:
+2026-03-14 15:41:16,485 [ERROR] ['RVI', 'RPGL', 'RWAYI', 'RUBI']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:41:16,485 [ERROR] ['RTAC']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:18,072 [INFO] [97/124] chunk_0096 — 50 tickers: RWAYL...SAR
+2026-03-14 15:41:18,495 [ERROR] $RYET: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:18,496 [ERROR] $SAFX: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:18,658 [ERROR] $SAGT: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:18,756 [ERROR] $SAC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:18,761 [ERROR] 
+8 Failed downloads:
+2026-03-14 15:41:18,761 [ERROR] ['RWTQ', 'RWTP', 'SAIL', 'RYOJ']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:41:18,761 [ERROR] ['RYET', 'SAFX', 'SAGT', 'SAC']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:20,340 [INFO] [98/124] chunk_0097 — 50 tickers: SARO...SCVL
+2026-03-14 15:41:20,863 [ERROR] $SAV: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:21,005 [ERROR] $SCAG: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:21,012 [ERROR] $SCPQ: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:21,078 [ERROR] 
+5 Failed downloads:
+2026-03-14 15:41:21,078 [ERROR] ['SCII', 'SATA']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:41:21,078 [ERROR] ['SAV', 'SCAG', 'SCPQ']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:22,724 [INFO] [99/124] chunk_0098 — 50 tickers: SCWO...SFWL
+2026-03-14 15:41:23,160 [ERROR] $SDHI: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:23,380 [ERROR] 
+4 Failed downloads:
+2026-03-14 15:41:23,380 [ERROR] ['SFD', 'SFB', 'SEV']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:41:23,380 [ERROR] ['SDHI']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:24,989 [INFO] [100/124] chunk_0099 — 50 tickers: SG...SIMO
+2026-03-14 15:41:25,469 [ERROR] $SHAZ: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:25,787 [ERROR] 
+3 Failed downloads:
+2026-03-14 15:41:25,787 [ERROR] ['SI', 'SGP']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:41:25,787 [ERROR] ['SHAZ']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:27,387 [INFO] [101/124] chunk_0100 — 50 tickers: SINT...SLRC
+2026-03-14 15:41:27,903 [ERROR] $SION: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:28,699 [ERROR] 
+4 Failed downloads:
+2026-03-14 15:41:28,699 [ERROR] ['SLGB', 'SLDE', 'SKBL']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:41:28,699 [ERROR] ['SION']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:30,288 [INFO] [102/124] chunk_0101 — 50 tickers: SLS...SNT
+2026-03-14 15:41:31,065 [ERROR] 
+3 Failed downloads:
+2026-03-14 15:41:31,065 [ERROR] ['SNDK', 'SMJF', 'SMA']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:41:32,637 [INFO] [103/124] chunk_0102 — 50 tickers: SNTG...SPHL
+2026-03-14 15:41:33,159 [ERROR] $SPEG: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:33,169 [ERROR] $SOJF: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:33,174 [ERROR] $SORA: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:33,185 [ERROR] $SORN: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:33,185 [ERROR] $SOMN: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:33,364 [ERROR] 
+8 Failed downloads:
+2026-03-14 15:41:33,364 [ERROR] ['SOLS', 'SOUL', 'SOCA']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:41:33,364 [ERROR] ['SPEG', 'SOJF', 'SORA', 'SORN', 'SOMN']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:34,935 [INFO] [104/124] chunk_0103 — 50 tickers: SPHR...SSL
+2026-03-14 15:41:35,416 [ERROR] $SSAC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:35,647 [ERROR] 
+4 Failed downloads:
+2026-03-14 15:41:35,647 [ERROR] ['SPME', 'SSEA', 'SRJN']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:41:35,647 [ERROR] ['SSAC']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:37,216 [INFO] [105/124] chunk_0104 — 50 tickers: SSM...STRS
+2026-03-14 15:41:37,420 [ERROR] $STAK: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:37,602 [ERROR] $STRC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:37,617 [ERROR] $STRF: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:37,785 [ERROR] 
+5 Failed downloads:
+2026-03-14 15:41:37,785 [ERROR] ['STRK', 'STRD']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:41:37,785 [ERROR] ['STAK', 'STRC', 'STRF']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:39,347 [INFO] [106/124] chunk_0105 — 50 tickers: STRT...SWZ
+2026-03-14 15:41:39,775 [ERROR] $SUIS: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:39,902 [ERROR] $SUNC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:39,902 [ERROR] $SVAC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:39,903 [ERROR] $STRZ: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:39,904 [ERROR] $SVCC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:39,907 [ERROR] $SVIV: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:39,954 [ERROR] 
+9 Failed downloads:
+2026-03-14 15:41:39,954 [ERROR] ['SVAQ', 'STUB', 'SUNB']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:41:39,954 [ERROR] ['SUIS', 'SUNC', 'SVAC', 'STRZ', 'SVCC', 'SVIV']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:41,519 [INFO] [107/124] chunk_0106 — 50 tickers: SXC...TCBI
+2026-03-14 15:41:41,940 [ERROR] $TACH: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:42,061 [ERROR] $TBH: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:42,086 [ERROR] 
+4 Failed downloads:
+2026-03-14 15:41:42,086 [ERROR] ['TACO', 'SZZL']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:41:42,086 [ERROR] ['TACH', 'TBH']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:43,658 [INFO] [108/124] chunk_0107 — 50 tickers: TCBIO...TFPM
+2026-03-14 15:41:43,867 [ERROR] $TDAC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:44,212 [ERROR] $TCPA: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:44,278 [ERROR] 
+5 Failed downloads:
+2026-03-14 15:41:44,278 [ERROR] ['TDWD', 'TDIC', 'TDOG']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:41:44,278 [ERROR] ['TDAC', 'TCPA']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:45,854 [INFO] [109/124] chunk_0108 — 50 tickers: TFSA...TLN
+2026-03-14 15:41:46,012 [ERROR] $TGHL: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:46,199 [ERROR] $TLIH: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:46,422 [ERROR] $TIC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:46,444 [ERROR] 
+6 Failed downloads:
+2026-03-14 15:41:46,444 [ERROR] ['TJGC', 'THH', 'TGE']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:41:46,444 [ERROR] ['TGHL', 'TLIH', 'TIC']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:48,045 [INFO] [110/124] chunk_0109 — 50 tickers: TLNC...TPET
+2026-03-14 15:41:48,217 [ERROR] $TMUSI: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:48,412 [ERROR] $TMUSZ: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:48,572 [ERROR] $TLNC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:48,579 [ERROR] 
+6 Failed downloads:
+2026-03-14 15:41:48,579 [ERROR] ['TMDE', 'TMUSL', 'TOPP']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:41:48,580 [ERROR] ['TMUSI', 'TMUSZ', 'TLNC']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:50,144 [INFO] [111/124] chunk_0110 — 50 tickers: TPG...TSCO
+2026-03-14 15:41:52,331 [INFO] [112/124] chunk_0111 — 50 tickers: TSEM...TX
+2026-03-14 15:41:52,512 [ERROR] $TSUI: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:52,664 [ERROR] $TVAI: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:52,758 [ERROR] $TVA: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:52,833 [ERROR] $TSOL: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:52,913 [ERROR] 
+8 Failed downloads:
+2026-03-14 15:41:52,913 [ERROR] ['TWOD', 'TWLV', 'TTRX', 'TTAM']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:41:52,913 [ERROR] ['TSUI', 'TVAI', 'TVA', 'TSOL']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:54,479 [INFO] [113/124] chunk_0112 — 50 tickers: TXG...UI
+2026-03-14 15:41:54,615 [ERROR] $UAC: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:55,112 [ERROR] 
+2 Failed downloads:
+2026-03-14 15:41:55,112 [ERROR] ['UFG']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:41:55,112 [ERROR] ['UAC']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:56,676 [INFO] [114/124] chunk_0113 — 50 tickers: UIS...USEA
+2026-03-14 15:41:57,353 [ERROR] 
+1 Failed download:
+2026-03-14 15:41:57,353 [ERROR] ['UMBFO']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:41:58,920 [INFO] [115/124] chunk_0114 — 50 tickers: USEG...VEEA
+2026-03-14 15:41:59,090 [ERROR] $VACI: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:41:59,525 [ERROR] 
+3 Failed downloads:
+2026-03-14 15:41:59,525 [ERROR] ['UYSC', 'VAVX']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:41:59,525 [ERROR] ['VACI']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:42:01,090 [INFO] [116/124] chunk_0115 — 50 tickers: VEEE...VLTO
+2026-03-14 15:42:01,818 [ERROR] $VIA: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:42:01,825 [ERROR] 
+4 Failed downloads:
+2026-03-14 15:42:01,825 [ERROR] ['VHCP', 'VG', 'VHUB']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:42:01,825 [ERROR] ['VIA']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:42:03,390 [INFO] [117/124] chunk_0116 — 50 tickers: VLY...VSNT
+2026-03-14 15:42:03,589 [ERROR] $VSNT: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:42:03,791 [ERROR] $VMET: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:42:03,994 [ERROR] 
+5 Failed downloads:
+2026-03-14 15:42:03,994 [ERROR] ['VRM', 'VOYG', 'VNTG']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:42:03,994 [ERROR] ['VSNT', 'VMET']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:42:05,600 [INFO] [118/124] chunk_0117 — 50 tickers: VST...WCC
+2026-03-14 15:42:05,990 [ERROR] $VWAV: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:42:06,402 [ERROR] 
+3 Failed downloads:
+2026-03-14 15:42:06,402 [ERROR] ['WBI', 'VTIX']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:42:06,402 [ERROR] ['VWAV']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:42:07,969 [INFO] [119/124] chunk_0118 — 50 tickers: WCN...WIX
+2026-03-14 15:42:08,154 [ERROR] $WFF: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:42:08,660 [ERROR] 
+4 Failed downloads:
+2026-03-14 15:42:08,660 [ERROR] ['WETO', 'WENN', 'WGRX']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:42:08,660 [ERROR] ['WFF']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:42:10,231 [INFO] [120/124] chunk_0119 — 50 tickers: WK...WSO-B
+2026-03-14 15:42:10,449 [ERROR] $WSBK: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:42:10,623 [ERROR] $WOLF: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:42:10,780 [ERROR] $WLTH: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:42:10,809 [ERROR] 
+6 Failed downloads:
+2026-03-14 15:42:10,809 [ERROR] ['WPAC', 'WSHP', 'WSBCO']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:42:10,809 [ERROR] ['WSBK', 'WOLF', 'WLTH']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:42:12,378 [INFO] [121/124] chunk_0120 — 50 tickers: WSR...XLO
+2026-03-14 15:42:12,544 [ERROR] $XFLH: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:42:12,545 [ERROR] $WYFI: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:42:12,550 [ERROR] $WTFCN: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:42:12,663 [ERROR] $XHLD: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:42:12,765 [ERROR] $WTF: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:42:12,917 [ERROR] 
+9 Failed downloads:
+2026-03-14 15:42:12,917 [ERROR] ['WSTN', 'WW', 'WXM', 'XELLL']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:42:12,917 [ERROR] ['XFLH', 'WYFI', 'WTFCN', 'XHLD', 'WTF']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:42:14,533 [INFO] [122/124] chunk_0121 — 50 tickers: XMTR...YIBO
+2026-03-14 15:42:14,853 [ERROR] $YB: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:42:15,120 [ERROR] $YDDL: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:42:15,126 [ERROR] $YCY: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:42:15,684 [ERROR] 
+6 Failed downloads:
+2026-03-14 15:42:15,684 [ERROR] ['XZO', 'YDES', 'XRPN']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:42:15,684 [ERROR] ['YB', 'YDDL', 'YCY']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:42:17,251 [INFO] [123/124] chunk_0122 — 50 tickers: YJ...ZLAB
+2026-03-14 15:42:17,547 [ERROR] $ZKPW: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01)
+2026-03-14 15:42:17,618 [ERROR] $YMAT: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:42:17,619 [ERROR] $YOUL: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:42:17,620 [ERROR] $YMT: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:42:17,627 [ERROR] $YSS: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:42:17,838 [ERROR] 
+8 Failed downloads:
+2026-03-14 15:42:17,838 [ERROR] ['ZKPU', 'ZKP', 'ZGM']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:42:17,838 [ERROR] ['ZKPW']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01)
+2026-03-14 15:42:17,838 [ERROR] ['YMAT', 'YOUL', 'YMT', 'YSS']: possibly delisted; no price data found  (1d 2024-01-01 -> 2025-01-01) (Yahoo error = "Data doesn't exist for startDate = 1704085200, endDate = 1735707600")
+2026-03-14 15:42:19,409 [INFO] [124/124] chunk_0123 — 19 tickers: ZM...ZYME
+2026-03-14 15:42:19,666 [ERROR] 
+1 Failed download:
+2026-03-14 15:42:19,666 [ERROR] ['ZYBT']: YFRateLimitError('Too Many Requests. Rate limited. Try after a while.')
+2026-03-14 15:42:21,198 [INFO] No failed chunks to retry.
+2026-03-14 15:42:21,201 [INFO] Consolidating 124 parquet files...
+2026-03-14 15:42:22,537 [INFO] Raw total: 1,374,179 rows, 5606 unique tickers
+2026-03-14 15:42:23,127 [INFO] Saved: C:\Users\vmc30\OneDrive\Desktop\Personal_Repos\yfinance\data\us_equities_2024_ohlcv.parquet  (1,084,355 rows, 4303 tickers)

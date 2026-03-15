@@ -1,5 +1,11 @@
 __pycache__/
 *.pyc
+.venv/
+*.env
+.env.*
+secrets/
+
 data/raw_chunks/
 data/progress.json
 data/download.log
+data/ticker_universe.json
