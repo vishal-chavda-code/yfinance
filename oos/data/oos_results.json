@@ -1,0 +1,2031 @@
+{
+  "metadata": {
+    "train_period": "2025",
+    "test_period": "2026-01-01 to 2026-03-15",
+    "train_rows": 802974,
+    "train_tickers": 3238,
+    "test_rows": 145778,
+    "test_tickers": 2977
+  },
+  "ols": [
+    {
+      "Dependent": "|Return|",
+      "Model": "\u2460 MktCap Only",
+      "Regressors": "log_mktcap",
+      "IS_R2": 0.081847,
+      "IS_Adj_R2": 0.081845,
+      "IS_MAE": 0.016368,
+      "IS_N": 802974,
+      "OOS_R2": 0.003974,
+      "OOS_Adj_R2": 0.003967,
+      "OOS_MAE": 0.015748,
+      "OOS_N": 145778,
+      "R2_decay": 0.077872,
+      "Coefficients": {
+        "log_mktcap": -0.00304785
+      },
+      "Intercept": 0.0864628
+    },
+    {
+      "Dependent": "|Return|",
+      "Model": "\u2461 Free-Float Only",
+      "Regressors": "eqy_free_float_pct",
+      "IS_R2": 0.0065,
+      "IS_Adj_R2": 0.006499,
+      "IS_MAE": 0.01697,
+      "IS_N": 802974,
+      "OOS_R2": 0.003704,
+      "OOS_Adj_R2": 0.003697,
+      "OOS_MAE": 0.015878,
+      "OOS_N": 145778,
+      "R2_decay": 0.002796,
+      "Coefficients": {
+        "eqy_free_float_pct": -9.463e-05
+      },
+      "Intercept": 0.02960699
+    },
+    {
+      "Dependent": "|Return|",
+      "Model": "\u2462 MktCap + FF",
+      "Regressors": "log_mktcap + eqy_free_float_pct",
+      "IS_R2": 0.081941,
+      "IS_Adj_R2": 0.081939,
+      "IS_MAE": 0.016365,
+      "IS_N": 802974,
+      "OOS_R2": 0.004118,
+      "OOS_Adj_R2": 0.004105,
+      "OOS_MAE": 0.015745,
+      "OOS_N": 145778,
+      "R2_decay": 0.077823,
+      "Coefficients": {
+        "log_mktcap": -0.00302124,
+        "eqy_free_float_pct": -1.178e-05
+      },
+      "Intercept": 0.08689567
+    },
+    {
+      "Dependent": "|Return|",
+      "Model": "\u2463 Amihud Only",
+      "Regressors": "log_illiq",
+      "IS_R2": 0.070681,
+      "IS_Adj_R2": 0.07068,
+      "IS_MAE": 0.016418,
+      "IS_N": 802974,
+      "OOS_R2": 0.002904,
+      "OOS_Adj_R2": 0.002897,
+      "OOS_MAE": 0.01567,
+      "OOS_N": 145778,
+      "R2_decay": 0.067777,
+      "Coefficients": {
+        "log_illiq": 0.00229827
+      },
+      "Intercept": 0.06782306
+    },
+    {
+      "Dependent": "|Return|",
+      "Model": "\u2464 MktCap + Amihud",
+      "Regressors": "log_mktcap + log_illiq",
+      "IS_R2": 0.081851,
+      "IS_Adj_R2": 0.081848,
+      "IS_MAE": 0.016368,
+      "IS_N": 802974,
+      "OOS_R2": 0.004,
+      "OOS_Adj_R2": 0.003986,
+      "OOS_MAE": 0.01575,
+      "OOS_N": 145778,
+      "R2_decay": 0.077851,
+      "Coefficients": {
+        "log_mktcap": -0.00310319,
+        "log_illiq": -4.819e-05
+      },
+      "Intercept": 0.08667128
+    },
+    {
+      "Dependent": "|Return|",
+      "Model": "\u2465 Kitchen Sink",
+      "Regressors": "log_mktcap + log_illiq + eqy_free_float_pct",
+      "IS_R2": 0.081987,
+      "IS_Adj_R2": 0.081984,
+      "IS_MAE": 0.016365,
+      "IS_N": 802974,
+      "OOS_R2": 0.004268,
+      "OOS_Adj_R2": 0.004248,
+      "OOS_MAE": 0.01575,
+      "OOS_N": 145778,
+      "R2_decay": 0.077719,
+      "Coefficients": {
+        "log_mktcap": -0.0032176,
+        "log_illiq": -0.00017857,
+        "eqy_free_float_pct": -1.563e-05
+      },
+      "Intercept": 0.08780977
+    },
+    {
+      "Dependent": "H-L Range",
+      "Model": "\u2460 MktCap Only",
+      "Regressors": "log_mktcap",
+      "IS_R2": 0.212302,
+      "IS_Adj_R2": 0.212301,
+      "IS_MAE": 0.021118,
+      "IS_N": 802974,
+      "OOS_R2": 0.02747,
+      "OOS_Adj_R2": 0.027463,
+      "OOS_MAE": 0.019513,
+      "OOS_N": 145778,
+      "R2_decay": 0.184832,
+      "Coefficients": {
+        "log_mktcap": -0.00673516
+      },
+      "Intercept": 0.1848185
+    },
+    {
+      "Dependent": "H-L Range",
+      "Model": "\u2461 Free-Float Only",
+      "Regressors": "eqy_free_float_pct",
+      "IS_R2": 0.017209,
+      "IS_Adj_R2": 0.017208,
+      "IS_MAE": 0.023549,
+      "IS_N": 802974,
+      "OOS_R2": 0.010205,
+      "OOS_Adj_R2": 0.010198,
+      "OOS_MAE": 0.019648,
+      "OOS_N": 145778,
+      "R2_decay": 0.007004,
+      "Coefficients": {
+        "eqy_free_float_pct": -0.00021127
+      },
+      "Intercept": 0.05936088
+    },
+    {
+      "Dependent": "H-L Range",
+      "Model": "\u2462 MktCap + FF",
+      "Regressors": "log_mktcap + eqy_free_float_pct",
+      "IS_R2": 0.212592,
+      "IS_Adj_R2": 0.21259,
+      "IS_MAE": 0.021106,
+      "IS_N": 802974,
+      "OOS_R2": 0.027523,
+      "OOS_Adj_R2": 0.02751,
+      "OOS_MAE": 0.01951,
+      "OOS_N": 145778,
+      "R2_decay": 0.185069,
+      "Coefficients": {
+        "log_mktcap": -0.00667116,
+        "eqy_free_float_pct": -2.833e-05
+      },
+      "Intercept": 0.18585947
+    },
+    {
+      "Dependent": "H-L Range",
+      "Model": "\u2463 Amihud Only",
+      "Regressors": "log_illiq",
+      "IS_R2": 0.186826,
+      "IS_Adj_R2": 0.186825,
+      "IS_MAE": 0.021217,
+      "IS_N": 802974,
+      "OOS_R2": 0.016263,
+      "OOS_Adj_R2": 0.016256,
+      "OOS_MAE": 0.019309,
+      "OOS_N": 145778,
+      "R2_decay": 0.170563,
+      "Coefficients": {
+        "log_illiq": 0.0051268
+      },
+      "Intercept": 0.14459524
+    },
+    {
+      "Dependent": "H-L Range",
+      "Model": "\u2464 MktCap + Amihud",
+      "Regressors": "log_mktcap + log_illiq",
+      "IS_R2": 0.212364,
+      "IS_Adj_R2": 0.212362,
+      "IS_MAE": 0.021111,
+      "IS_N": 802974,
+      "OOS_R2": 0.026971,
+      "OOS_Adj_R2": 0.026958,
+      "OOS_MAE": 0.019508,
+      "OOS_N": 145778,
+      "R2_decay": 0.185393,
+      "Coefficients": {
+        "log_mktcap": -0.00643821,
+        "log_illiq": 0.00025858
+      },
+      "Intercept": 0.18369982
+    },
+    {
+      "Dependent": "H-L Range",
+      "Model": "\u2465 Kitchen Sink",
+      "Regressors": "log_mktcap + log_illiq + eqy_free_float_pct",
+      "IS_R2": 0.212592,
+      "IS_Adj_R2": 0.212589,
+      "IS_MAE": 0.021105,
+      "IS_N": 802974,
+      "OOS_R2": 0.027468,
+      "OOS_Adj_R2": 0.027448,
+      "OOS_MAE": 0.01951,
+      "OOS_N": 145778,
+      "R2_decay": 0.185125,
+      "Coefficients": {
+        "log_mktcap": -0.00664124,
+        "log_illiq": 2.721e-05,
+        "eqy_free_float_pct": -2.774e-05
+      },
+      "Intercept": 0.18572018
+    }
+  ],
+  "ols_by_size": [
+    {
+      "Set": "IS",
+      "Size": "Small Cap",
+      "Dependent": "|Return|",
+      "Model": "\u2460 MktCap Only",
+      "R2": 0.089427,
+      "N": 265394
+    },
+    {
+      "Set": "IS",
+      "Size": "Small Cap",
+      "Dependent": "|Return|",
+      "Model": "\u2461 Free-Float Only",
+      "R2": 1.6e-05,
+      "N": 265394
+    },
+    {
+      "Set": "IS",
+      "Size": "Small Cap",
+      "Dependent": "|Return|",
+      "Model": "\u2462 MktCap + FF",
+      "R2": 0.089511,
+      "N": 265394
+    },
+    {
+      "Set": "IS",
+      "Size": "Small Cap",
+      "Dependent": "|Return|",
+      "Model": "\u2463 Amihud Only",
+      "R2": 0.050458,
+      "N": 265394
+    },
+    {
+      "Set": "IS",
+      "Size": "Small Cap",
+      "Dependent": "|Return|",
+      "Model": "\u2464 MktCap + Amihud",
+      "R2": 0.089439,
+      "N": 265394
+    },
+    {
+      "Set": "IS",
+      "Size": "Small Cap",
+      "Dependent": "|Return|",
+      "Model": "\u2465 Kitchen Sink",
+      "R2": 0.089511,
+      "N": 265394
+    },
+    {
+      "Set": "IS",
+      "Size": "Small Cap",
+      "Dependent": "H-L Range",
+      "Model": "\u2460 MktCap Only",
+      "R2": 0.203782,
+      "N": 265394
+    },
+    {
+      "Set": "IS",
+      "Size": "Small Cap",
+      "Dependent": "H-L Range",
+      "Model": "\u2461 Free-Float Only",
+      "R2": 0.000144,
+      "N": 265394
+    },
+    {
+      "Set": "IS",
+      "Size": "Small Cap",
+      "Dependent": "H-L Range",
+      "Model": "\u2462 MktCap + FF",
+      "R2": 0.204174,
+      "N": 265394
+    },
+    {
+      "Set": "IS",
+      "Size": "Small Cap",
+      "Dependent": "H-L Range",
+      "Model": "\u2463 Amihud Only",
+      "R2": 0.120003,
+      "N": 265394
+    },
+    {
+      "Set": "IS",
+      "Size": "Small Cap",
+      "Dependent": "H-L Range",
+      "Model": "\u2464 MktCap + Amihud",
+      "R2": 0.204047,
+      "N": 265394
+    },
+    {
+      "Set": "IS",
+      "Size": "Small Cap",
+      "Dependent": "H-L Range",
+      "Model": "\u2465 Kitchen Sink",
+      "R2": 0.204267,
+      "N": 265394
+    },
+    {
+      "Set": "IS",
+      "Size": "Mid Cap",
+      "Dependent": "|Return|",
+      "Model": "\u2460 MktCap Only",
+      "R2": 0.005073,
+      "N": 268838
+    },
+    {
+      "Set": "IS",
+      "Size": "Mid Cap",
+      "Dependent": "|Return|",
+      "Model": "\u2461 Free-Float Only",
+      "R2": 0.002427,
+      "N": 268838
+    },
+    {
+      "Set": "IS",
+      "Size": "Mid Cap",
+      "Dependent": "|Return|",
+      "Model": "\u2462 MktCap + FF",
+      "R2": 0.006698,
+      "N": 268838
+    },
+    {
+      "Set": "IS",
+      "Size": "Mid Cap",
+      "Dependent": "|Return|",
+      "Model": "\u2463 Amihud Only",
+      "R2": 0.003785,
+      "N": 268838
+    },
+    {
+      "Set": "IS",
+      "Size": "Mid Cap",
+      "Dependent": "|Return|",
+      "Model": "\u2464 MktCap + Amihud",
+      "R2": 0.005553,
+      "N": 268838
+    },
+    {
+      "Set": "IS",
+      "Size": "Mid Cap",
+      "Dependent": "|Return|",
+      "Model": "\u2465 Kitchen Sink",
+      "R2": 0.0067,
+      "N": 268838
+    },
+    {
+      "Set": "IS",
+      "Size": "Mid Cap",
+      "Dependent": "H-L Range",
+      "Model": "\u2460 MktCap Only",
+      "R2": 0.01591,
+      "N": 268838
+    },
+    {
+      "Set": "IS",
+      "Size": "Mid Cap",
+      "Dependent": "H-L Range",
+      "Model": "\u2461 Free-Float Only",
+      "R2": 0.007262,
+      "N": 268838
+    },
+    {
+      "Set": "IS",
+      "Size": "Mid Cap",
+      "Dependent": "H-L Range",
+      "Model": "\u2462 MktCap + FF",
+      "R2": 0.020719,
+      "N": 268838
+    },
+    {
+      "Set": "IS",
+      "Size": "Mid Cap",
+      "Dependent": "H-L Range",
+      "Model": "\u2463 Amihud Only",
+      "R2": 0.013976,
+      "N": 268838
+    },
+    {
+      "Set": "IS",
+      "Size": "Mid Cap",
+      "Dependent": "H-L Range",
+      "Model": "\u2464 MktCap + Amihud",
+      "R2": 0.018476,
+      "N": 268838
+    },
+    {
+      "Set": "IS",
+      "Size": "Mid Cap",
+      "Dependent": "H-L Range",
+      "Model": "\u2465 Kitchen Sink",
+      "R2": 0.021017,
+      "N": 268838
+    },
+    {
+      "Set": "IS",
+      "Size": "Large Cap",
+      "Dependent": "|Return|",
+      "Model": "\u2460 MktCap Only",
+      "R2": 0.005838,
+      "N": 268742
+    },
+    {
+      "Set": "IS",
+      "Size": "Large Cap",
+      "Dependent": "|Return|",
+      "Model": "\u2461 Free-Float Only",
+      "R2": 0.002179,
+      "N": 268742
+    },
+    {
+      "Set": "IS",
+      "Size": "Large Cap",
+      "Dependent": "|Return|",
+      "Model": "\u2462 MktCap + FF",
+      "R2": 0.00744,
+      "N": 268742
+    },
+    {
+      "Set": "IS",
+      "Size": "Large Cap",
+      "Dependent": "|Return|",
+      "Model": "\u2463 Amihud Only",
+      "R2": 0.004223,
+      "N": 268742
+    },
+    {
+      "Set": "IS",
+      "Size": "Large Cap",
+      "Dependent": "|Return|",
+      "Model": "\u2464 MktCap + Amihud",
+      "R2": 0.005846,
+      "N": 268742
+    },
+    {
+      "Set": "IS",
+      "Size": "Large Cap",
+      "Dependent": "|Return|",
+      "Model": "\u2465 Kitchen Sink",
+      "R2": 0.007651,
+      "N": 268742
+    },
+    {
+      "Set": "IS",
+      "Size": "Large Cap",
+      "Dependent": "H-L Range",
+      "Model": "\u2460 MktCap Only",
+      "R2": 0.020915,
+      "N": 268742
+    },
+    {
+      "Set": "IS",
+      "Size": "Large Cap",
+      "Dependent": "H-L Range",
+      "Model": "\u2461 Free-Float Only",
+      "R2": 0.006118,
+      "N": 268742
+    },
+    {
+      "Set": "IS",
+      "Size": "Large Cap",
+      "Dependent": "H-L Range",
+      "Model": "\u2462 MktCap + FF",
+      "R2": 0.025215,
+      "N": 268742
+    },
+    {
+      "Set": "IS",
+      "Size": "Large Cap",
+      "Dependent": "H-L Range",
+      "Model": "\u2463 Amihud Only",
+      "R2": 0.014447,
+      "N": 268742
+    },
+    {
+      "Set": "IS",
+      "Size": "Large Cap",
+      "Dependent": "H-L Range",
+      "Model": "\u2464 MktCap + Amihud",
+      "R2": 0.020915,
+      "N": 268742
+    },
+    {
+      "Set": "IS",
+      "Size": "Large Cap",
+      "Dependent": "H-L Range",
+      "Model": "\u2465 Kitchen Sink",
+      "R2": 0.026028,
+      "N": 268742
+    },
+    {
+      "Set": "OOS",
+      "Size": "Small Cap",
+      "Dependent": "|Return|",
+      "Model": "\u2460 MktCap Only",
+      "R2": 0.046541,
+      "N": 48563
+    },
+    {
+      "Set": "OOS",
+      "Size": "Small Cap",
+      "Dependent": "|Return|",
+      "Model": "\u2461 Free-Float Only",
+      "R2": 0.00081,
+      "N": 48563
+    },
+    {
+      "Set": "OOS",
+      "Size": "Small Cap",
+      "Dependent": "|Return|",
+      "Model": "\u2462 MktCap + FF",
+      "R2": 0.046591,
+      "N": 48563
+    },
+    {
+      "Set": "OOS",
+      "Size": "Small Cap",
+      "Dependent": "|Return|",
+      "Model": "\u2463 Amihud Only",
+      "R2": 0.022725,
+      "N": 48563
+    },
+    {
+      "Set": "OOS",
+      "Size": "Small Cap",
+      "Dependent": "|Return|",
+      "Model": "\u2464 MktCap + Amihud",
+      "R2": 0.047848,
+      "N": 48563
+    },
+    {
+      "Set": "OOS",
+      "Size": "Small Cap",
+      "Dependent": "|Return|",
+      "Model": "\u2465 Kitchen Sink",
+      "R2": 0.048634,
+      "N": 48563
+    },
+    {
+      "Set": "OOS",
+      "Size": "Small Cap",
+      "Dependent": "H-L Range",
+      "Model": "\u2460 MktCap Only",
+      "R2": 0.099113,
+      "N": 48563
+    },
+    {
+      "Set": "OOS",
+      "Size": "Small Cap",
+      "Dependent": "H-L Range",
+      "Model": "\u2461 Free-Float Only",
+      "R2": 0.001206,
+      "N": 48563
+    },
+    {
+      "Set": "OOS",
+      "Size": "Small Cap",
+      "Dependent": "H-L Range",
+      "Model": "\u2462 MktCap + FF",
+      "R2": 0.099125,
+      "N": 48563
+    },
+    {
+      "Set": "OOS",
+      "Size": "Small Cap",
+      "Dependent": "H-L Range",
+      "Model": "\u2463 Amihud Only",
+      "R2": 0.045622,
+      "N": 48563
+    },
+    {
+      "Set": "OOS",
+      "Size": "Small Cap",
+      "Dependent": "H-L Range",
+      "Model": "\u2464 MktCap + Amihud",
+      "R2": 0.103131,
+      "N": 48563
+    },
+    {
+      "Set": "OOS",
+      "Size": "Small Cap",
+      "Dependent": "H-L Range",
+      "Model": "\u2465 Kitchen Sink",
+      "R2": 0.104652,
+      "N": 48563
+    },
+    {
+      "Set": "OOS",
+      "Size": "Mid Cap",
+      "Dependent": "|Return|",
+      "Model": "\u2460 MktCap Only",
+      "R2": 0.001316,
+      "N": 48558
+    },
+    {
+      "Set": "OOS",
+      "Size": "Mid Cap",
+      "Dependent": "|Return|",
+      "Model": "\u2461 Free-Float Only",
+      "R2": 0.000867,
+      "N": 48558
+    },
+    {
+      "Set": "OOS",
+      "Size": "Mid Cap",
+      "Dependent": "|Return|",
+      "Model": "\u2462 MktCap + FF",
+      "R2": 0.002031,
+      "N": 48558
+    },
+    {
+      "Set": "OOS",
+      "Size": "Mid Cap",
+      "Dependent": "|Return|",
+      "Model": "\u2463 Amihud Only",
+      "R2": 0.001798,
+      "N": 48558
+    },
+    {
+      "Set": "OOS",
+      "Size": "Mid Cap",
+      "Dependent": "|Return|",
+      "Model": "\u2464 MktCap + Amihud",
+      "R2": 0.002012,
+      "N": 48558
+    },
+    {
+      "Set": "OOS",
+      "Size": "Mid Cap",
+      "Dependent": "|Return|",
+      "Model": "\u2465 Kitchen Sink",
+      "R2": 0.002255,
+      "N": 48558
+    },
+    {
+      "Set": "OOS",
+      "Size": "Mid Cap",
+      "Dependent": "H-L Range",
+      "Model": "\u2460 MktCap Only",
+      "R2": 0.006232,
+      "N": 48558
+    },
+    {
+      "Set": "OOS",
+      "Size": "Mid Cap",
+      "Dependent": "H-L Range",
+      "Model": "\u2461 Free-Float Only",
+      "R2": 0.002294,
+      "N": 48558
+    },
+    {
+      "Set": "OOS",
+      "Size": "Mid Cap",
+      "Dependent": "H-L Range",
+      "Model": "\u2462 MktCap + FF",
+      "R2": 0.007993,
+      "N": 48558
+    },
+    {
+      "Set": "OOS",
+      "Size": "Mid Cap",
+      "Dependent": "H-L Range",
+      "Model": "\u2463 Amihud Only",
+      "R2": 0.006547,
+      "N": 48558
+    },
+    {
+      "Set": "OOS",
+      "Size": "Mid Cap",
+      "Dependent": "H-L Range",
+      "Model": "\u2464 MktCap + Amihud",
+      "R2": 0.008126,
+      "N": 48558
+    },
+    {
+      "Set": "OOS",
+      "Size": "Mid Cap",
+      "Dependent": "H-L Range",
+      "Model": "\u2465 Kitchen Sink",
+      "R2": 0.008667,
+      "N": 48558
+    },
+    {
+      "Set": "OOS",
+      "Size": "Large Cap",
+      "Dependent": "|Return|",
+      "Model": "\u2460 MktCap Only",
+      "R2": 0.002831,
+      "N": 48657
+    },
+    {
+      "Set": "OOS",
+      "Size": "Large Cap",
+      "Dependent": "|Return|",
+      "Model": "\u2461 Free-Float Only",
+      "R2": 0.002666,
+      "N": 48657
+    },
+    {
+      "Set": "OOS",
+      "Size": "Large Cap",
+      "Dependent": "|Return|",
+      "Model": "\u2462 MktCap + FF",
+      "R2": 0.00507,
+      "N": 48657
+    },
+    {
+      "Set": "OOS",
+      "Size": "Large Cap",
+      "Dependent": "|Return|",
+      "Model": "\u2463 Amihud Only",
+      "R2": 0.003013,
+      "N": 48657
+    },
+    {
+      "Set": "OOS",
+      "Size": "Large Cap",
+      "Dependent": "|Return|",
+      "Model": "\u2464 MktCap + Amihud",
+      "R2": 0.003173,
+      "N": 48657
+    },
+    {
+      "Set": "OOS",
+      "Size": "Large Cap",
+      "Dependent": "|Return|",
+      "Model": "\u2465 Kitchen Sink",
+      "R2": 0.00507,
+      "N": 48657
+    },
+    {
+      "Set": "OOS",
+      "Size": "Large Cap",
+      "Dependent": "H-L Range",
+      "Model": "\u2460 MktCap Only",
+      "R2": 0.016489,
+      "N": 48657
+    },
+    {
+      "Set": "OOS",
+      "Size": "Large Cap",
+      "Dependent": "H-L Range",
+      "Model": "\u2461 Free-Float Only",
+      "R2": 0.005569,
+      "N": 48657
+    },
+    {
+      "Set": "OOS",
+      "Size": "Large Cap",
+      "Dependent": "H-L Range",
+      "Model": "\u2462 MktCap + FF",
+      "R2": 0.02059,
+      "N": 48657
+    },
+    {
+      "Set": "OOS",
+      "Size": "Large Cap",
+      "Dependent": "H-L Range",
+      "Model": "\u2463 Amihud Only",
+      "R2": 0.014788,
+      "N": 48657
+    },
+    {
+      "Set": "OOS",
+      "Size": "Large Cap",
+      "Dependent": "H-L Range",
+      "Model": "\u2464 MktCap + Amihud",
+      "R2": 0.017074,
+      "N": 48657
+    },
+    {
+      "Set": "OOS",
+      "Size": "Large Cap",
+      "Dependent": "H-L Range",
+      "Model": "\u2465 Kitchen Sink",
+      "R2": 0.020591,
+      "N": 48657
+    }
+  ],
+  "extreme_moves": {
+    "p95_thresholds": {
+      "Large": 0.044771,
+      "Mega": 0.040401,
+      "Micro": 0.088368,
+      "Mid": 0.054902,
+      "Nano": 0.152174,
+      "Small": 0.066568
+    },
+    "baseline_IS": {
+      "set": "IS",
+      "precision": 0.039,
+      "recall": 0.5088,
+      "f1": 0.0725,
+      "N": 564403,
+      "N_extreme": 21519,
+      "confusion": [
+        [
+          273181,
+          269703
+        ],
+        [
+          10571,
+          10948
+        ]
+      ]
+    },
+    "addon_IS": {
+      "set": "IS",
+      "precision": 0.0397,
+      "recall": 0.5283,
+      "f1": 0.0739,
+      "N": 564403,
+      "N_extreme": 21519,
+      "confusion": [
+        [
+          268210,
+          274674
+        ],
+        [
+          10150,
+          11369
+        ]
+      ]
+    },
+    "baseline_OOS": {
+      "set": "OOS",
+      "precision": 0.0737,
+      "recall": 0.6636,
+      "f1": 0.1326,
+      "N": 114931,
+      "N_extreme": 7036,
+      "confusion": [
+        [
+          49199,
+          58696
+        ],
+        [
+          2367,
+          4669
+        ]
+      ]
+    },
+    "addon_OOS": {
+      "set": "OOS",
+      "precision": 0.0735,
+      "recall": 0.6838,
+      "f1": 0.1327,
+      "N": 114931,
+      "N_extreme": 7036,
+      "confusion": [
+        [
+          47234,
+          60661
+        ],
+        [
+          2225,
+          4811
+        ]
+      ]
+    },
+    "baseline_coef": [
+      [
+        0.1213752478117826
+      ]
+    ],
+    "addon_coef": [
+      [
+        0.1223694315797402,
+        0.030307816167657955
+      ]
+    ]
+  },
+  "asymmetry": [
+    {
+      "Set": "IS",
+      "Split": "All Days",
+      "Regressor": "Amihud 252d",
+      "R2": 0.070681,
+      "N": 802974
+    },
+    {
+      "Set": "IS",
+      "Split": "All Days",
+      "Regressor": "Free-Float %",
+      "R2": 0.0065,
+      "N": 802974
+    },
+    {
+      "Set": "IS",
+      "Split": "Down Days",
+      "Regressor": "Amihud 252d",
+      "R2": 0.08759,
+      "N": 396605
+    },
+    {
+      "Set": "IS",
+      "Split": "Down Days",
+      "Regressor": "Free-Float %",
+      "R2": 0.006298,
+      "N": 396605
+    },
+    {
+      "Set": "IS",
+      "Split": "Up Days",
+      "Regressor": "Amihud 252d",
+      "R2": 0.055939,
+      "N": 406369
+    },
+    {
+      "Set": "IS",
+      "Split": "Up Days",
+      "Regressor": "Free-Float %",
+      "R2": 0.006701,
+      "N": 406369
+    },
+    {
+      "Set": "OOS",
+      "Split": "All Days",
+      "Regressor": "Amihud 252d",
+      "R2": 0.020683,
+      "N": 145778
+    },
+    {
+      "Set": "OOS",
+      "Split": "All Days",
+      "Regressor": "Free-Float %",
+      "R2": 0.00406,
+      "N": 145778
+    },
+    {
+      "Set": "OOS",
+      "Split": "Down Days",
+      "Regressor": "Amihud 252d",
+      "R2": 0.021931,
+      "N": 71815
+    },
+    {
+      "Set": "OOS",
+      "Split": "Down Days",
+      "Regressor": "Free-Float %",
+      "R2": 0.003778,
+      "N": 71815
+    },
+    {
+      "Set": "OOS",
+      "Split": "Up Days",
+      "Regressor": "Amihud 252d",
+      "R2": 0.019429,
+      "N": 73963
+    },
+    {
+      "Set": "OOS",
+      "Split": "Up Days",
+      "Regressor": "Free-Float %",
+      "R2": 0.004352,
+      "N": 73963
+    }
+  ],
+  "scenario": [
+    {
+      "Set": "IS",
+      "Bucket": "Nano",
+      "N_tickers": 271,
+      "N_days": 65214,
+      "p95_up": 0.197861,
+      "p99_up": 0.572642,
+      "p95_down": 0.160633,
+      "p99_down": 0.326235
+    },
+    {
+      "Set": "IS",
+      "Bucket": "Micro",
+      "N_tickers": 321,
+      "N_days": 78749,
+      "p95_up": 0.097228,
+      "p99_up": 0.202512,
+      "p95_down": 0.08378,
+      "p99_down": 0.153133
+    },
+    {
+      "Set": "IS",
+      "Bucket": "Small",
+      "N_tickers": 1045,
+      "N_days": 260297,
+      "p95_up": 0.0701,
+      "p99_up": 0.14056,
+      "p95_down": 0.064445,
+      "p99_down": 0.118914
+    },
+    {
+      "Set": "IS",
+      "Bucket": "Mid",
+      "N_tickers": 866,
+      "N_days": 215553,
+      "p95_up": 0.056159,
+      "p99_up": 0.112788,
+      "p95_down": 0.053929,
+      "p99_down": 0.100212
+    },
+    {
+      "Set": "IS",
+      "Bucket": "Large",
+      "N_tickers": 689,
+      "N_days": 171661,
+      "p95_up": 0.043626,
+      "p99_up": 0.088276,
+      "p95_down": 0.046235,
+      "p99_down": 0.088761
+    },
+    {
+      "Set": "IS",
+      "Bucket": "Mega",
+      "N_tickers": 46,
+      "N_days": 11500,
+      "p95_up": 0.038382,
+      "p99_up": 0.078904,
+      "p95_down": 0.043918,
+      "p99_down": 0.077618
+    },
+    {
+      "Set": "OOS",
+      "Bucket": "Nano",
+      "N_tickers": 87,
+      "N_days": 4220,
+      "p95_up": 0.191617,
+      "p99_up": 0.612058,
+      "p95_down": 0.17391,
+      "p99_down": 0.312352
+    },
+    {
+      "Set": "OOS",
+      "Bucket": "Micro",
+      "N_tickers": 269,
+      "N_days": 13130,
+      "p95_up": 0.089342,
+      "p99_up": 0.169946,
+      "p95_down": 0.079763,
+      "p99_down": 0.147592
+    },
+    {
+      "Set": "OOS",
+      "Bucket": "Small",
+      "N_tickers": 996,
+      "N_days": 48803,
+      "p95_up": 0.066667,
+      "p99_up": 0.132403,
+      "p95_down": 0.066399,
+      "p99_down": 0.119352
+    },
+    {
+      "Set": "OOS",
+      "Bucket": "Mid",
+      "N_tickers": 867,
+      "N_days": 42483,
+      "p95_up": 0.058834,
+      "p99_up": 0.103843,
+      "p95_down": 0.06188,
+      "p99_down": 0.110033
+    },
+    {
+      "Set": "OOS",
+      "Bucket": "Large",
+      "N_tickers": 705,
+      "N_days": 34545,
+      "p95_up": 0.051751,
+      "p99_up": 0.090705,
+      "p95_down": 0.057493,
+      "p99_down": 0.09848
+    },
+    {
+      "Set": "OOS",
+      "Bucket": "Mega",
+      "N_tickers": 53,
+      "N_days": 2597,
+      "p95_up": 0.044899,
+      "p99_up": 0.080635,
+      "p95_down": 0.045945,
+      "p99_down": 0.080258
+    }
+  ],
+  "walk_forward": [
+    {
+      "Target_Month": "2025-07",
+      "Train_Months": 6,
+      "Dependent": "|Return|",
+      "Model": "\u2460 MktCap Only",
+      "IS_R2": 0.074078,
+      "OOS_R2": 0.085597,
+      "R2_decay": -0.011519,
+      "Train_N": 390973,
+      "Test_N": 70264
+    },
+    {
+      "Target_Month": "2025-07",
+      "Train_Months": 6,
+      "Dependent": "|Return|",
+      "Model": "\u2461 Free-Float Only",
+      "IS_R2": 0.008045,
+      "OOS_R2": -0.03226,
+      "R2_decay": 0.040304,
+      "Train_N": 390973,
+      "Test_N": 70264
+    },
+    {
+      "Target_Month": "2025-07",
+      "Train_Months": 6,
+      "Dependent": "|Return|",
+      "Model": "\u2462 MktCap + FF",
+      "IS_R2": 0.074203,
+      "OOS_R2": 0.084529,
+      "R2_decay": -0.010327,
+      "Train_N": 390973,
+      "Test_N": 70264
+    },
+    {
+      "Target_Month": "2025-07",
+      "Train_Months": 6,
+      "Dependent": "|Return|",
+      "Model": "\u2463 Amihud Only",
+      "IS_R2": 0.060556,
+      "OOS_R2": 0.072615,
+      "R2_decay": -0.012059,
+      "Train_N": 390973,
+      "Test_N": 70264
+    },
+    {
+      "Target_Month": "2025-07",
+      "Train_Months": 6,
+      "Dependent": "|Return|",
+      "Model": "\u2464 MktCap + Amihud",
+      "IS_R2": 0.074457,
+      "OOS_R2": 0.085286,
+      "R2_decay": -0.010829,
+      "Train_N": 390973,
+      "Test_N": 70264
+    },
+    {
+      "Target_Month": "2025-07",
+      "Train_Months": 6,
+      "Dependent": "|Return|",
+      "Model": "\u2465 Kitchen Sink",
+      "IS_R2": 0.075034,
+      "OOS_R2": 0.080548,
+      "R2_decay": -0.005513,
+      "Train_N": 390973,
+      "Test_N": 70264
+    },
+    {
+      "Target_Month": "2025-07",
+      "Train_Months": 6,
+      "Dependent": "H-L Range",
+      "Model": "\u2460 MktCap Only",
+      "IS_R2": 0.21241,
+      "OOS_R2": 0.219601,
+      "R2_decay": -0.00719,
+      "Train_N": 390973,
+      "Test_N": 70264
+    },
+    {
+      "Target_Month": "2025-07",
+      "Train_Months": 6,
+      "Dependent": "H-L Range",
+      "Model": "\u2461 Free-Float Only",
+      "IS_R2": 0.024445,
+      "OOS_R2": -0.096498,
+      "R2_decay": 0.120944,
+      "Train_N": 390973,
+      "Test_N": 70264
+    },
+    {
+      "Target_Month": "2025-07",
+      "Train_Months": 6,
+      "Dependent": "H-L Range",
+      "Model": "\u2462 MktCap + FF",
+      "IS_R2": 0.212965,
+      "OOS_R2": 0.215275,
+      "R2_decay": -0.00231,
+      "Train_N": 390973,
+      "Test_N": 70264
+    },
+    {
+      "Target_Month": "2025-07",
+      "Train_Months": 6,
+      "Dependent": "H-L Range",
+      "Model": "\u2463 Amihud Only",
+      "IS_R2": 0.178336,
+      "OOS_R2": 0.196429,
+      "R2_decay": -0.018092,
+      "Train_N": 390973,
+      "Test_N": 70264
+    },
+    {
+      "Target_Month": "2025-07",
+      "Train_Months": 6,
+      "Dependent": "H-L Range",
+      "Model": "\u2464 MktCap + Amihud",
+      "IS_R2": 0.212723,
+      "OOS_R2": 0.218382,
+      "R2_decay": -0.005659,
+      "Train_N": 390973,
+      "Test_N": 70264
+    },
+    {
+      "Target_Month": "2025-07",
+      "Train_Months": 6,
+      "Dependent": "H-L Range",
+      "Model": "\u2465 Kitchen Sink",
+      "IS_R2": 0.214114,
+      "OOS_R2": 0.20556,
+      "R2_decay": 0.008554,
+      "Train_N": 390973,
+      "Test_N": 70264
+    },
+    {
+      "Target_Month": "2025-08",
+      "Train_Months": 7,
+      "Dependent": "|Return|",
+      "Model": "\u2460 MktCap Only",
+      "IS_R2": 0.076777,
+      "OOS_R2": 0.075799,
+      "R2_decay": 0.000978,
+      "Train_N": 461237,
+      "Test_N": 67536
+    },
+    {
+      "Target_Month": "2025-08",
+      "Train_Months": 7,
+      "Dependent": "|Return|",
+      "Model": "\u2461 Free-Float Only",
+      "IS_R2": 0.005282,
+      "OOS_R2": 0.004027,
+      "R2_decay": 0.001255,
+      "Train_N": 461237,
+      "Test_N": 67536
+    },
+    {
+      "Target_Month": "2025-08",
+      "Train_Months": 7,
+      "Dependent": "|Return|",
+      "Model": "\u2462 MktCap + FF",
+      "IS_R2": 0.076808,
+      "OOS_R2": 0.075977,
+      "R2_decay": 0.000831,
+      "Train_N": 461237,
+      "Test_N": 67536
+    },
+    {
+      "Target_Month": "2025-08",
+      "Train_Months": 7,
+      "Dependent": "|Return|",
+      "Model": "\u2463 Amihud Only",
+      "IS_R2": 0.06334,
+      "OOS_R2": 0.07001,
+      "R2_decay": -0.00667,
+      "Train_N": 461237,
+      "Test_N": 67536
+    },
+    {
+      "Target_Month": "2025-08",
+      "Train_Months": 7,
+      "Dependent": "|Return|",
+      "Model": "\u2464 MktCap + Amihud",
+      "IS_R2": 0.077075,
+      "OOS_R2": 0.074643,
+      "R2_decay": 0.002431,
+      "Train_N": 461237,
+      "Test_N": 67536
+    },
+    {
+      "Target_Month": "2025-08",
+      "Train_Months": 7,
+      "Dependent": "|Return|",
+      "Model": "\u2465 Kitchen Sink",
+      "IS_R2": 0.077257,
+      "OOS_R2": 0.074771,
+      "R2_decay": 0.002486,
+      "Train_N": 461237,
+      "Test_N": 67536
+    },
+    {
+      "Target_Month": "2025-08",
+      "Train_Months": 7,
+      "Dependent": "H-L Range",
+      "Model": "\u2460 MktCap Only",
+      "IS_R2": 0.215853,
+      "OOS_R2": 0.189801,
+      "R2_decay": 0.026052,
+      "Train_N": 461237,
+      "Test_N": 67536
+    },
+    {
+      "Target_Month": "2025-08",
+      "Train_Months": 7,
+      "Dependent": "H-L Range",
+      "Model": "\u2461 Free-Float Only",
+      "IS_R2": 0.015703,
+      "OOS_R2": -0.000104,
+      "R2_decay": 0.015806,
+      "Train_N": 461237,
+      "Test_N": 67536
+    },
+    {
+      "Target_Month": "2025-08",
+      "Train_Months": 7,
+      "Dependent": "H-L Range",
+      "Model": "\u2462 MktCap + FF",
+      "IS_R2": 0.216018,
+      "OOS_R2": 0.190539,
+      "R2_decay": 0.025478,
+      "Train_N": 461237,
+      "Test_N": 67536
+    },
+    {
+      "Target_Month": "2025-08",
+      "Train_Months": 7,
+      "Dependent": "H-L Range",
+      "Model": "\u2463 Amihud Only",
+      "IS_R2": 0.183227,
+      "OOS_R2": 0.183089,
+      "R2_decay": 0.000137,
+      "Train_N": 461237,
+      "Test_N": 67536
+    },
+    {
+      "Target_Month": "2025-08",
+      "Train_Months": 7,
+      "Dependent": "H-L Range",
+      "Model": "\u2464 MktCap + Amihud",
+      "IS_R2": 0.216004,
+      "OOS_R2": 0.18803,
+      "R2_decay": 0.027974,
+      "Train_N": 461237,
+      "Test_N": 67536
+    },
+    {
+      "Target_Month": "2025-08",
+      "Train_Months": 7,
+      "Dependent": "H-L Range",
+      "Model": "\u2465 Kitchen Sink",
+      "IS_R2": 0.216378,
+      "OOS_R2": 0.188103,
+      "R2_decay": 0.028275,
+      "Train_N": 461237,
+      "Test_N": 67536
+    },
+    {
+      "Target_Month": "2025-09",
+      "Train_Months": 8,
+      "Dependent": "|Return|",
+      "Model": "\u2460 MktCap Only",
+      "IS_R2": 0.077076,
+      "OOS_R2": 0.079956,
+      "R2_decay": -0.00288,
+      "Train_N": 528773,
+      "Test_N": 67692
+    },
+    {
+      "Target_Month": "2025-09",
+      "Train_Months": 8,
+      "Dependent": "|Return|",
+      "Model": "\u2461 Free-Float Only",
+      "IS_R2": 0.005585,
+      "OOS_R2": -0.01064,
+      "R2_decay": 0.016225,
+      "Train_N": 528773,
+      "Test_N": 67692
+    },
+    {
+      "Target_Month": "2025-09",
+      "Train_Months": 8,
+      "Dependent": "|Return|",
+      "Model": "\u2462 MktCap + FF",
+      "IS_R2": 0.077126,
+      "OOS_R2": 0.080181,
+      "R2_decay": -0.003055,
+      "Train_N": 528773,
+      "Test_N": 67692
+    },
+    {
+      "Target_Month": "2025-09",
+      "Train_Months": 8,
+      "Dependent": "|Return|",
+      "Model": "\u2463 Amihud Only",
+      "IS_R2": 0.064536,
+      "OOS_R2": 0.071442,
+      "R2_decay": -0.006906,
+      "Train_N": 528773,
+      "Test_N": 67692
+    },
+    {
+      "Target_Month": "2025-09",
+      "Train_Months": 8,
+      "Dependent": "|Return|",
+      "Model": "\u2464 MktCap + Amihud",
+      "IS_R2": 0.077228,
+      "OOS_R2": 0.079201,
+      "R2_decay": -0.001974,
+      "Train_N": 528773,
+      "Test_N": 67692
+    },
+    {
+      "Target_Month": "2025-09",
+      "Train_Months": 8,
+      "Dependent": "|Return|",
+      "Model": "\u2465 Kitchen Sink",
+      "IS_R2": 0.077404,
+      "OOS_R2": 0.07934,
+      "R2_decay": -0.001936,
+      "Train_N": 528773,
+      "Test_N": 67692
+    },
+    {
+      "Target_Month": "2025-09",
+      "Train_Months": 8,
+      "Dependent": "H-L Range",
+      "Model": "\u2460 MktCap Only",
+      "IS_R2": 0.21504,
+      "OOS_R2": 0.194124,
+      "R2_decay": 0.020917,
+      "Train_N": 528773,
+      "Test_N": 67692
+    },
+    {
+      "Target_Month": "2025-09",
+      "Train_Months": 8,
+      "Dependent": "H-L Range",
+      "Model": "\u2461 Free-Float Only",
+      "IS_R2": 0.016398,
+      "OOS_R2": -0.012429,
+      "R2_decay": 0.028827,
+      "Train_N": 528773,
+      "Test_N": 67692
+    },
+    {
+      "Target_Month": "2025-09",
+      "Train_Months": 8,
+      "Dependent": "H-L Range",
+      "Model": "\u2462 MktCap + FF",
+      "IS_R2": 0.215272,
+      "OOS_R2": 0.194787,
+      "R2_decay": 0.020485,
+      "Train_N": 528773,
+      "Test_N": 67692
+    },
+    {
+      "Target_Month": "2025-09",
+      "Train_Months": 8,
+      "Dependent": "H-L Range",
+      "Model": "\u2463 Amihud Only",
+      "IS_R2": 0.185192,
+      "OOS_R2": 0.180087,
+      "R2_decay": 0.005105,
+      "Train_N": 528773,
+      "Test_N": 67692
+    },
+    {
+      "Target_Month": "2025-09",
+      "Train_Months": 8,
+      "Dependent": "H-L Range",
+      "Model": "\u2464 MktCap + Amihud",
+      "IS_R2": 0.215057,
+      "OOS_R2": 0.19372,
+      "R2_decay": 0.021337,
+      "Train_N": 528773,
+      "Test_N": 67692
+    },
+    {
+      "Target_Month": "2025-09",
+      "Train_Months": 8,
+      "Dependent": "H-L Range",
+      "Model": "\u2465 Kitchen Sink",
+      "IS_R2": 0.215398,
+      "OOS_R2": 0.193833,
+      "R2_decay": 0.021566,
+      "Train_N": 528773,
+      "Test_N": 67692
+    },
+    {
+      "Target_Month": "2025-10",
+      "Train_Months": 9,
+      "Dependent": "|Return|",
+      "Model": "\u2460 MktCap Only",
+      "IS_R2": 0.078953,
+      "OOS_R2": 0.069605,
+      "R2_decay": 0.009348,
+      "Train_N": 596465,
+      "Test_N": 74235
+    },
+    {
+      "Target_Month": "2025-10",
+      "Train_Months": 9,
+      "Dependent": "|Return|",
+      "Model": "\u2461 Free-Float Only",
+      "IS_R2": 0.00588,
+      "OOS_R2": 0.006384,
+      "R2_decay": -0.000504,
+      "Train_N": 596465,
+      "Test_N": 74235
+    },
+    {
+      "Target_Month": "2025-10",
+      "Train_Months": 9,
+      "Dependent": "|Return|",
+      "Model": "\u2462 MktCap + FF",
+      "IS_R2": 0.079021,
+      "OOS_R2": 0.069725,
+      "R2_decay": 0.009296,
+      "Train_N": 596465,
+      "Test_N": 74235
+    },
+    {
+      "Target_Month": "2025-10",
+      "Train_Months": 9,
+      "Dependent": "|Return|",
+      "Model": "\u2463 Amihud Only",
+      "IS_R2": 0.066798,
+      "OOS_R2": 0.063974,
+      "R2_decay": 0.002824,
+      "Train_N": 596465,
+      "Test_N": 74235
+    },
+    {
+      "Target_Month": "2025-10",
+      "Train_Months": 9,
+      "Dependent": "|Return|",
+      "Model": "\u2464 MktCap + Amihud",
+      "IS_R2": 0.079036,
+      "OOS_R2": 0.069206,
+      "R2_decay": 0.009829,
+      "Train_N": 596465,
+      "Test_N": 74235
+    },
+    {
+      "Target_Month": "2025-10",
+      "Train_Months": 9,
+      "Dependent": "|Return|",
+      "Model": "\u2465 Kitchen Sink",
+      "IS_R2": 0.079208,
+      "OOS_R2": 0.069175,
+      "R2_decay": 0.010033,
+      "Train_N": 596465,
+      "Test_N": 74235
+    },
+    {
+      "Target_Month": "2025-10",
+      "Train_Months": 9,
+      "Dependent": "H-L Range",
+      "Model": "\u2460 MktCap Only",
+      "IS_R2": 0.215549,
+      "OOS_R2": 0.167046,
+      "R2_decay": 0.048503,
+      "Train_N": 596465,
+      "Test_N": 74235
+    },
+    {
+      "Target_Month": "2025-10",
+      "Train_Months": 9,
+      "Dependent": "H-L Range",
+      "Model": "\u2461 Free-Float Only",
+      "IS_R2": 0.016757,
+      "OOS_R2": 0.014886,
+      "R2_decay": 0.001872,
+      "Train_N": 596465,
+      "Test_N": 74235
+    },
+    {
+      "Target_Month": "2025-10",
+      "Train_Months": 9,
+      "Dependent": "H-L Range",
+      "Model": "\u2462 MktCap + FF",
+      "IS_R2": 0.215818,
+      "OOS_R2": 0.167392,
+      "R2_decay": 0.048426,
+      "Train_N": 596465,
+      "Test_N": 74235
+    },
+    {
+      "Target_Month": "2025-10",
+      "Train_Months": 9,
+      "Dependent": "H-L Range",
+      "Model": "\u2463 Amihud Only",
+      "IS_R2": 0.18714,
+      "OOS_R2": 0.158673,
+      "R2_decay": 0.028468,
+      "Train_N": 596465,
+      "Test_N": 74235
+    },
+    {
+      "Target_Month": "2025-10",
+      "Train_Months": 9,
+      "Dependent": "H-L Range",
+      "Model": "\u2464 MktCap + Amihud",
+      "IS_R2": 0.215549,
+      "OOS_R2": 0.167071,
+      "R2_decay": 0.048477,
+      "Train_N": 596465,
+      "Test_N": 74235
+    },
+    {
+      "Target_Month": "2025-10",
+      "Train_Months": 9,
+      "Dependent": "H-L Range",
+      "Model": "\u2465 Kitchen Sink",
+      "IS_R2": 0.215868,
+      "OOS_R2": 0.166816,
+      "R2_decay": 0.049052,
+      "Train_N": 596465,
+      "Test_N": 74235
+    },
+    {
+      "Target_Month": "2025-11",
+      "Train_Months": 10,
+      "Dependent": "|Return|",
+      "Model": "\u2460 MktCap Only",
+      "IS_R2": 0.078006,
+      "OOS_R2": 0.080149,
+      "R2_decay": -0.002143,
+      "Train_N": 670700,
+      "Test_N": 61296
+    },
+    {
+      "Target_Month": "2025-11",
+      "Train_Months": 10,
+      "Dependent": "|Return|",
+      "Model": "\u2461 Free-Float Only",
+      "IS_R2": 0.005956,
+      "OOS_R2": 0.005796,
+      "R2_decay": 0.00016,
+      "Train_N": 670700,
+      "Test_N": 61296
+    },
+    {
+      "Target_Month": "2025-11",
+      "Train_Months": 10,
+      "Dependent": "|Return|",
+      "Model": "\u2462 MktCap + FF",
+      "IS_R2": 0.078079,
+      "OOS_R2": 0.080201,
+      "R2_decay": -0.002121,
+      "Train_N": 670700,
+      "Test_N": 61296
+    },
+    {
+      "Target_Month": "2025-11",
+      "Train_Months": 10,
+      "Dependent": "|Return|",
+      "Model": "\u2463 Amihud Only",
+      "IS_R2": 0.066525,
+      "OOS_R2": 0.06986,
+      "R2_decay": -0.003335,
+      "Train_N": 670700,
+      "Test_N": 61296
+    },
+    {
+      "Target_Month": "2025-11",
+      "Train_Months": 10,
+      "Dependent": "|Return|",
+      "Model": "\u2464 MktCap + Amihud",
+      "IS_R2": 0.078046,
+      "OOS_R2": 0.080087,
+      "R2_decay": -0.002041,
+      "Train_N": 670700,
+      "Test_N": 61296
+    },
+    {
+      "Target_Month": "2025-11",
+      "Train_Months": 10,
+      "Dependent": "|Return|",
+      "Model": "\u2465 Kitchen Sink",
+      "IS_R2": 0.078198,
+      "OOS_R2": 0.080124,
+      "R2_decay": -0.001926,
+      "Train_N": 670700,
+      "Test_N": 61296
+    },
+    {
+      "Target_Month": "2025-11",
+      "Train_Months": 10,
+      "Dependent": "H-L Range",
+      "Model": "\u2460 MktCap Only",
+      "IS_R2": 0.21105,
+      "OOS_R2": 0.176266,
+      "R2_decay": 0.034785,
+      "Train_N": 670700,
+      "Test_N": 61296
+    },
+    {
+      "Target_Month": "2025-11",
+      "Train_Months": 10,
+      "Dependent": "H-L Range",
+      "Model": "\u2461 Free-Float Only",
+      "IS_R2": 0.016754,
+      "OOS_R2": 0.013052,
+      "R2_decay": 0.003702,
+      "Train_N": 670700,
+      "Test_N": 61296
+    },
+    {
+      "Target_Month": "2025-11",
+      "Train_Months": 10,
+      "Dependent": "H-L Range",
+      "Model": "\u2462 MktCap + FF",
+      "IS_R2": 0.211327,
+      "OOS_R2": 0.176483,
+      "R2_decay": 0.034844,
+      "Train_N": 670700,
+      "Test_N": 61296
+    },
+    {
+      "Target_Month": "2025-11",
+      "Train_Months": 10,
+      "Dependent": "H-L Range",
+      "Model": "\u2463 Amihud Only",
+      "IS_R2": 0.184555,
+      "OOS_R2": 0.157013,
+      "R2_decay": 0.027542,
+      "Train_N": 670700,
+      "Test_N": 61296
+    },
+    {
+      "Target_Month": "2025-11",
+      "Train_Months": 10,
+      "Dependent": "H-L Range",
+      "Model": "\u2464 MktCap + Amihud",
+      "IS_R2": 0.211069,
+      "OOS_R2": 0.176365,
+      "R2_decay": 0.034704,
+      "Train_N": 670700,
+      "Test_N": 61296
+    },
+    {
+      "Target_Month": "2025-11",
+      "Train_Months": 10,
+      "Dependent": "H-L Range",
+      "Model": "\u2465 Kitchen Sink",
+      "IS_R2": 0.211335,
+      "OOS_R2": 0.176432,
+      "R2_decay": 0.034903,
+      "Train_N": 670700,
+      "Test_N": 61296
+    },
+    {
+      "Target_Month": "2025-12",
+      "Train_Months": 11,
+      "Dependent": "|Return|",
+      "Model": "\u2460 MktCap Only",
+      "IS_R2": 0.078265,
+      "OOS_R2": 0.105719,
+      "R2_decay": -0.027454,
+      "Train_N": 731996,
+      "Test_N": 70978
+    },
+    {
+      "Target_Month": "2025-12",
+      "Train_Months": 11,
+      "Dependent": "|Return|",
+      "Model": "\u2461 Free-Float Only",
+      "IS_R2": 0.006015,
+      "OOS_R2": -0.008853,
+      "R2_decay": 0.014867,
+      "Train_N": 731996,
+      "Test_N": 70978
+    },
+    {
+      "Target_Month": "2025-12",
+      "Train_Months": 11,
+      "Dependent": "|Return|",
+      "Model": "\u2462 MktCap + FF",
+      "IS_R2": 0.078336,
+      "OOS_R2": 0.106081,
+      "R2_decay": -0.027745,
+      "Train_N": 731996,
+      "Test_N": 70978
+    },
+    {
+      "Target_Month": "2025-12",
+      "Train_Months": 11,
+      "Dependent": "|Return|",
+      "Model": "\u2463 Amihud Only",
+      "IS_R2": 0.066894,
+      "OOS_R2": 0.096843,
+      "R2_decay": -0.029949,
+      "Train_N": 731996,
+      "Test_N": 70978
+    },
+    {
+      "Target_Month": "2025-12",
+      "Train_Months": 11,
+      "Dependent": "|Return|",
+      "Model": "\u2464 MktCap + Amihud",
+      "IS_R2": 0.078296,
+      "OOS_R2": 0.105213,
+      "R2_decay": -0.026917,
+      "Train_N": 731996,
+      "Test_N": 70978
+    },
+    {
+      "Target_Month": "2025-12",
+      "Train_Months": 11,
+      "Dependent": "|Return|",
+      "Model": "\u2465 Kitchen Sink",
+      "IS_R2": 0.078438,
+      "OOS_R2": 0.10529,
+      "R2_decay": -0.026852,
+      "Train_N": 731996,
+      "Test_N": 70978
+    },
+    {
+      "Target_Month": "2025-12",
+      "Train_Months": 11,
+      "Dependent": "H-L Range",
+      "Model": "\u2460 MktCap Only",
+      "IS_R2": 0.208319,
+      "OOS_R2": 0.240242,
+      "R2_decay": -0.031923,
+      "Train_N": 731996,
+      "Test_N": 70978
+    },
+    {
+      "Target_Month": "2025-12",
+      "Train_Months": 11,
+      "Dependent": "H-L Range",
+      "Model": "\u2461 Free-Float Only",
+      "IS_R2": 0.016682,
+      "OOS_R2": 0.000472,
+      "R2_decay": 0.01621,
+      "Train_N": 731996,
+      "Test_N": 70978
+    },
+    {
+      "Target_Month": "2025-12",
+      "Train_Months": 11,
+      "Dependent": "H-L Range",
+      "Model": "\u2462 MktCap + FF",
+      "IS_R2": 0.20859,
+      "OOS_R2": 0.240763,
+      "R2_decay": -0.032173,
+      "Train_N": 731996,
+      "Test_N": 70978
+    },
+    {
+      "Target_Month": "2025-12",
+      "Train_Months": 11,
+      "Dependent": "H-L Range",
+      "Model": "\u2463 Amihud Only",
+      "IS_R2": 0.182449,
+      "OOS_R2": 0.219023,
+      "R2_decay": -0.036575,
+      "Train_N": 731996,
+      "Test_N": 70978
+    },
+    {
+      "Target_Month": "2025-12",
+      "Train_Months": 11,
+      "Dependent": "H-L Range",
+      "Model": "\u2464 MktCap + Amihud",
+      "IS_R2": 0.208346,
+      "OOS_R2": 0.240641,
+      "R2_decay": -0.032296,
+      "Train_N": 731996,
+      "Test_N": 70978
+    },
+    {
+      "Target_Month": "2025-12",
+      "Train_Months": 11,
+      "Dependent": "H-L Range",
+      "Model": "\u2465 Kitchen Sink",
+      "IS_R2": 0.208594,
+      "OOS_R2": 0.240628,
+      "R2_decay": -0.032034,
+      "Train_N": 731996,
+      "Test_N": 70978
+    }
+  ],
+  "walk_forward_summary": [
+    {
+      "Dependent": "H-L Range",
+      "Model": "\u2460 MktCap Only",
+      "Avg_OOS_R2": 0.197847,
+      "Avg_IS_R2": 0.213037,
+      "Avg_R2_decay": 0.015191,
+      "Min_OOS_R2": 0.167046,
+      "Max_OOS_R2": 0.240242,
+      "Months_tested": 6
+    },
+    {
+      "Dependent": "H-L Range",
+      "Model": "\u2461 Free-Float Only",
+      "Avg_OOS_R2": -0.013437,
+      "Avg_IS_R2": 0.01779,
+      "Avg_R2_decay": 0.031227,
+      "Min_OOS_R2": -0.096498,
+      "Max_OOS_R2": 0.014886,
+      "Months_tested": 6
+    },
+    {
+      "Dependent": "H-L Range",
+      "Model": "\u2462 MktCap + FF",
+      "Avg_OOS_R2": 0.19754,
+      "Avg_IS_R2": 0.213332,
+      "Avg_R2_decay": 0.015792,
+      "Min_OOS_R2": 0.167392,
+      "Max_OOS_R2": 0.240763,
+      "Months_tested": 6
+    },
+    {
+      "Dependent": "H-L Range",
+      "Model": "\u2463 Amihud Only",
+      "Avg_OOS_R2": 0.182386,
+      "Avg_IS_R2": 0.183483,
+      "Avg_R2_decay": 0.001098,
+      "Min_OOS_R2": 0.157013,
+      "Max_OOS_R2": 0.219023,
+      "Months_tested": 6
+    },
+    {
+      "Dependent": "H-L Range",
+      "Model": "\u2464 MktCap + Amihud",
+      "Avg_OOS_R2": 0.197368,
+      "Avg_IS_R2": 0.213125,
+      "Avg_R2_decay": 0.015756,
+      "Min_OOS_R2": 0.167071,
+      "Max_OOS_R2": 0.240641,
+      "Months_tested": 6
+    },
+    {
+      "Dependent": "H-L Range",
+      "Model": "\u2465 Kitchen Sink",
+      "Avg_OOS_R2": 0.195229,
+      "Avg_IS_R2": 0.213615,
+      "Avg_R2_decay": 0.018386,
+      "Min_OOS_R2": 0.166816,
+      "Max_OOS_R2": 0.240628,
+      "Months_tested": 6
+    },
+    {
+      "Dependent": "|Return|",
+      "Model": "\u2460 MktCap Only",
+      "Avg_OOS_R2": 0.082804,
+      "Avg_IS_R2": 0.077193,
+      "Avg_R2_decay": -0.005612,
+      "Min_OOS_R2": 0.069605,
+      "Max_OOS_R2": 0.105719,
+      "Months_tested": 6
+    },
+    {
+      "Dependent": "|Return|",
+      "Model": "\u2461 Free-Float Only",
+      "Avg_OOS_R2": -0.005924,
+      "Avg_IS_R2": 0.006127,
+      "Avg_R2_decay": 0.012051,
+      "Min_OOS_R2": -0.03226,
+      "Max_OOS_R2": 0.006384,
+      "Months_tested": 6
+    },
+    {
+      "Dependent": "|Return|",
+      "Model": "\u2462 MktCap + FF",
+      "Avg_OOS_R2": 0.082782,
+      "Avg_IS_R2": 0.077262,
+      "Avg_R2_decay": -0.00552,
+      "Min_OOS_R2": 0.069725,
+      "Max_OOS_R2": 0.106081,
+      "Months_tested": 6
+    },
+    {
+      "Dependent": "|Return|",
+      "Model": "\u2463 Amihud Only",
+      "Avg_OOS_R2": 0.074124,
+      "Avg_IS_R2": 0.064775,
+      "Avg_R2_decay": -0.009349,
+      "Min_OOS_R2": 0.063974,
+      "Max_OOS_R2": 0.096843,
+      "Months_tested": 6
+    },
+    {
+      "Dependent": "|Return|",
+      "Model": "\u2464 MktCap + Amihud",
+      "Avg_OOS_R2": 0.082273,
+      "Avg_IS_R2": 0.077356,
+      "Avg_R2_decay": -0.004917,
+      "Min_OOS_R2": 0.069206,
+      "Max_OOS_R2": 0.105213,
+      "Months_tested": 6
+    },
+    {
+      "Dependent": "|Return|",
+      "Model": "\u2465 Kitchen Sink",
+      "Avg_OOS_R2": 0.081541,
+      "Avg_IS_R2": 0.07759,
+      "Avg_R2_decay": -0.003951,
+      "Min_OOS_R2": 0.069175,
+      "Max_OOS_R2": 0.10529,
+      "Months_tested": 6
+    }
+  ]
+}
