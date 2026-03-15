@@ -1536,7 +1536,7 @@ def page_staleness():
             dbc.Col(make_card("6+ Month Unchanged", f"{staleness['streak_6plus']:.0%}",
                               "Severely stale data",
                               color=COLORS["accent_red"]), md=3),
-            dbc.Col(make_card("Never Changed", f"{staleness['never_changed_pct']:.0%}",
+            dbc.Col(make_card("Never Changed", f"{staleness['never_changed_pct']:.1%}",
                               "Same value all 12 months",
                               color=COLORS["accent_red"]), md=3),
             dbc.Col(make_card("Quarter-Boundary Ratio",
