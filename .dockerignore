@@ -1,0 +1,16 @@
+data/
+oos/data/
+.git/
+__pycache__/
+*.pyc
+.env
+*.egg-info/
+.venv/
+Bloomberg/
+_diag.py
+_rebuild_dashboard.py
+_render_test.py
+README.md
+README_2.md
+progress_tracker.md
+coding_skill.md
