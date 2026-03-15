@@ -3,8 +3,9 @@ plotly_dash.py — Liquidity Risk Dashboard (Amihud ILLIQ vs Free-Float Analysis
 ================================================================================
 Production-grade Plotly Dash application for liquidity risk analysis.
 
-Tells the story: Free-float is stale and unreliable → Amihud ILLIQ is a live,
-superior measure of liquidity risk that works across all market cap sizes.
+Compares two liquidity signals — Amihud ILLIQ (daily, trade-derived) and
+Bloomberg free-float % (quarterly, filing-derived) — to understand where
+each excels, where each fails, and how they complement each other.
 
 Model versions compared:
   1. Total Market Cap Only       — baseline size proxy
@@ -1380,7 +1381,7 @@ def page_overview():
     return html.Div([
         # Hero
         html.Div([
-            html.H1("The Liquidity Blind Spot", style={
+            html.H1("Two Signals, One Risk", style={
                 "background": f"linear-gradient(135deg, {COLORS['accent_blue']}, {COLORS['accent_purple']})",
                 "-webkit-background-clip": "text",
                 "-webkit-text-fill-color": "transparent",
@@ -1388,8 +1389,9 @@ def page_overview():
                 "lineHeight": 1.1,
             }),
             html.P(
-                "Why free-float percentage fails as a liquidity measure — and how "
-                "the Amihud illiquidity ratio provides a live, actionable signal.",
+                "Amihud ILLIQ and free-float percentage capture different facets of "
+                "liquidity risk. This dashboard maps where each signal shines, where "
+                "each fails, and how they combine.",
                 style={"color": COLORS["text_muted"], "fontSize": "1.05rem",
                        "maxWidth": "680px", "lineHeight": 1.5},
             ),
@@ -1401,9 +1403,9 @@ def page_overview():
                               "Daily ticker-day rows, 2025"), md=3),
             dbc.Col(make_card("Tickers Analyzed", f"{df['ticker'].nunique():,}",
                               "US equities, full-year 2025"), md=3),
-            dbc.Col(make_card("Amihud R² Superiority", f"{superiority_ret:.1f}×",
-                              f"vs Free-Float for |Return|",
-                              color=COLORS["accent_green"]), md=3),
+            dbc.Col(make_card("Amihud R² (standalone)", f"{r2_amihud_ret:.4f}",
+                              f"FF% standalone: {r2_ff_ret:.4f}",
+                              color=COLORS["accent_blue"]), md=3),
             dbc.Col(make_card("FF% Stale 1+ Quarter", f"{staleness['streak_3plus']:.0%}",
                               "Tickers unchanged for 3+ months",
                               color=COLORS["accent_red"]), md=3),
@@ -1414,35 +1416,39 @@ def page_overview():
                               "Of tickers have free-float data"), md=3),
             dbc.Col(make_card("Analysis Sample", f"{dfc.shape[0]:,}",
                               "Rows with all fields non-null"), md=3),
-            dbc.Col(make_card("Amihud R² (|Return|)", f"{r2_amihud_ret:.4f}",
-                              f"vs FF%: {r2_ff_ret:.4f}",
-                              color=COLORS["accent_blue"]), md=3),
-            dbc.Col(make_card("Amihud R² (H-L Range)", f"{r2_amihud_hl:.4f}",
-                              f"vs FF%: {r2_ff_hl:.4f}",
-                              color=COLORS["accent_cyan"]), md=3),
+            dbc.Col(make_card("Amihud-MktCap Corr", f"{-0.95:.2f}",
+                              "Amihud is largely a size proxy",
+                              color=COLORS["accent_orange"]), md=3),
+            dbc.Col(make_card("FF% Adds More after Size", "Yes",
+                              "Higher incremental R² over MktCap",
+                              color=COLORS["accent_green"]), md=3),
         ], className="g-3 mb-4"),
 
         # Story overview
         dbc.Card(
             dbc.CardBody([
-                html.H5("The Narrative", style={"color": COLORS["accent_blue"],
+                html.H5("The Question", style={"color": COLORS["accent_blue"],
                                                   "fontWeight": 700, "marginBottom": "12px"}),
                 dcc.Markdown("""
-**The conventional approach** to sizing position risk uses market capitalization and free-float percentage
-— the share of stock available for public trading. The assumption: lower free-float → less supply
-→ greater price impact per trade.
+**Two competing liquidity signals exist.** Free-float percentage (Bloomberg `EQY_FREE_FLOAT_PCT`)
+measures the *supply side* — what share of outstanding stock is publicly tradeable. The Amihud
+ILLIQ ratio measures the *friction side* — how much the price moves per dollar of actual volume.
+These capture fundamentally different information.
 
-**The problem**: Free-float data from vendors like Bloomberg is inherently stale. It updates
-quarterly at best, and for many stocks, the reported value *doesn't change for the entire year*.
-Meanwhile, true liquidity conditions shift daily.
+**What this analysis reveals** across {:,} daily observations and {:,} US equities in 2025:
 
-**The solution**: The **Amihud ILLIQ ratio** — computed daily from actual trading data
-(|return| / dollar volume) — captures real-time liquidity dynamics. Our analysis of **{:,} daily
-observations** across **{:,} US equities** in 2025 demonstrates that Amihud consistently explains
-**{:.1f}× more** return variance than free-float percentage, even after controlling for firm size.
+- **As a standalone predictor**, Amihud explains {:.1f}× more return variance than free-float —
+  but most of this is because Amihud is nearly a perfect proxy for market cap (Spearman ρ = −0.95).
+- **After controlling for market cap**, free-float actually contributes *more* incremental R² than
+  Amihud — because FF% is less collinear with size and captures genuinely different information.
+- **Within size buckets**, Amihud dominates — especially in small caps where free-float has
+  essentially zero explanatory power but Amihud captures real microstructure friction.
+- **Free-float data is structurally stale** — {:.0%} of tickers are unchanged for 3+ months.
+  Amihud updates daily.
 
-Navigate the tabs to explore each dimension of the evidence.
-""".format(df.shape[0], df["ticker"].nunique(), superiority_ret),
+The story is not "one wins" — it's "each wins in a different context." Navigate the chapters
+to see where.
+""".format(df.shape[0], df["ticker"].nunique(), superiority_ret, staleness['streak_3plus']),
                              style={"color": COLORS["text_muted"], "fontSize": "0.9rem",
                                     "lineHeight": 1.7}),
             ]),
@@ -1608,19 +1614,25 @@ def page_horse_race():
                 html.H5("Key Takeaway", style={"color": COLORS["accent_blue"],
                                                   "fontWeight": 700, "marginBottom": "8px"}),
                 dcc.Markdown(f"""
-The Amihud illiquidity ratio explains **{superiority_ret:.1f}× more** variance in daily |Return|
-and **{superiority_hl:.1f}× more** in intraday H-L range compared to free-float percentage.
+**As a standalone predictor**, Amihud explains {superiority_ret:.1f}× more |Return| variance and
+{superiority_hl:.1f}× more H-L Range variance than free-float. But context matters:
 
-**The H-L Range comparison is the cleanest test.** Because Amihud ILLIQ is computed from
-close-to-close returns and dollar volume, using it to predict close-to-close |Return| introduces
-a degree of contemporaneous overlap (today's return is one of 252 inputs to the rolling Amihud).
-The intraday H-L Range has **no such overlap** — it comes from high/low prices, not close-to-close
-returns — making the **{superiority_hl:.1f}× superiority** on H-L Range the more conservative
-and methodologically airtight result.
+**Why the gap is so large:** Amihud correlates with market cap at ρ = −0.95. Much of its
+explanatory power comes from being a near-perfect size proxy. Market cap *alone* actually
+outperforms Amihud alone (R² = {r2_amihud_ret:.4f} for Amihud vs ~0.082 for MktCap on |Return|).
 
-The quintile sorts confirm this model-free: stocks in the highest Amihud quintile (most illiquid)
-show **monotonically increasing** return magnitudes from Q1 to Q5. Free-float sorts are weaker
-and less monotonic — consistent with a measure that's stale and less precise.
+**Where each signal shines:**
+- **Amihud dominates within size buckets** — especially small caps, where free-float has
+  essentially zero R² but Amihud captures real microstructure friction.
+- **Free-float adds more *incremental* information** on top of market cap — because it is
+  less collinear with size and captures ownership structure that MktCap misses.
+
+**The quintile sorts** confirm the standalone Amihud result model-free: stocks in the highest
+Amihud quintile show monotonically increasing return magnitudes. Free-float sorts are weaker
+and less monotonic.
+
+The right question is not "which is better?" but "better *for what?*" — explored in the
+Regression Specs and Size Bucket tabs.
 """, style={"color": COLORS["text_muted"], "fontSize": "0.85rem", "lineHeight": 1.6}),
             ]),
             style={"backgroundColor": COLORS["card"], "border": f"1px solid {COLORS['card_border']}",
@@ -1726,24 +1738,25 @@ def page_size():
 
         dbc.Card(
             dbc.CardBody([
-                html.H5("Verdict: Not a Size Effect", style={
+                html.H5("Where Amihud Genuinely Wins", style={
                     "color": COLORS["accent_green"], "fontWeight": 700, "marginBottom": "8px"}),
                 dcc.Markdown("""
-Amihud's explanatory power holds across **all three size buckets**: Small, Mid, and Large.
-This rules out the objection that "Amihud only works because small stocks are illiquid and
-volatile" — it works equally well within large-caps where free-float data is most complete.
+**This is Amihud's strongest result.** Within each size bucket — where market cap is held
+roughly constant — Amihud outperforms free-float in every tercile, for both dependent variables.
 
-**Why is small cap R² so much higher?** Two compounding factors:
+**Small caps are where the gap is widest.** Amihud R² in small caps is 10–100× larger than
+free-float R². This makes economic sense: small-cap stocks have the widest dispersion of
+microstructure friction (thin order books, wide spreads), and Amihud measures that friction
+directly. Free-float — a static ownership number — tells you nothing about intraday trading
+conditions.
 
-1. **Wider dispersion of illiquidity.** Small cap `log(ILLIQ)` has ~2× the standard deviation
-   of mid/large caps. More X-variation → more explanatory power mechanically.
-2. **Steeper slope.** The price impact coefficient is 3-4× larger in small caps — a unit
-   increase in log(ILLIQ) moves absolute returns far more because order books are thin.
-3. **Free-float is near zero R² in small caps.** FF% has essentially no explanatory power
-   among small names — confirming that static supply data is completely blind to the micro-
-   structure friction that drives small-cap return variance.
+**Mid and large caps:** Amihud still wins, though the margin is smaller (~1.5–2×). Free-float
+carries more signal in larger names where ownership filings are more timely and the supply
+channel matters more.
 
-This is *not* an artifact — it reflects genuine microstructure reality.
+**Why this matters:** The pooled regression (previous tab) is dominated by the Amihud–MktCap
+collinearity (ρ = −0.95). This within-bucket view strips out size and shows the **residual**
+signal — and there, Amihud's microstructure information is genuinely unique.
 """, style={"color": COLORS["text_muted"], "fontSize": "0.85rem", "lineHeight": 1.6}),
             ]),
             style={"backgroundColor": COLORS["card"], "border": f"1px solid {COLORS['card_border']}",
@@ -2385,7 +2398,7 @@ def page_regression_deep_dive():
             "marginBottom": "12px"}),
         html.P(
             "Run spec ⑥ cross-sectionally each month, then t-test the coefficient time series. "
-            "If Amihud's β stays significant while FF's t-stat drops, Amihud subsumes FF's information.",
+            "Examine which coefficients remain significant after controlling for the other variables.",
             style={"color": COLORS["text_muted"], "fontSize": "0.85rem", "marginBottom": "16px",
                    "maxWidth": "700px"},
         ),
@@ -2396,11 +2409,20 @@ def page_regression_deep_dive():
                 html.H5("Key Takeaway", style={
                     "color": COLORS["accent_blue"], "fontWeight": 700, "marginBottom": "8px"}),
                 dcc.Markdown("""
-The **incremental R²** from adding Amihud to market cap is consistently larger than the increment
-from adding free-float. In the kitchen sink model (spec ⑥), free-float's coefficient
-should shrink or flip sign — confirming it was proxying for the same information Amihud
-captures more precisely. The **Fama-MacBeth** t-statistics confirm this month by month:
-Amihud's coefficient is consistently significant; free-float's often is not.
+**The ΔR² decomposition reveals a nuanced picture.** After controlling for market cap,
+free-float actually contributes **more incremental R²** than Amihud for both dependent
+variables. This is because Amihud is so highly correlated with market cap (ρ = −0.95) that
+adding it on top of MktCap provides almost no new information — the size signal is already
+captured. Free-float (ρ ≈ 0.43 with MktCap) is less redundant with size, so it adds a
+genuinely different dimension: ownership structure.
+
+**However**, both increments are tiny in absolute terms. The practical takeaway is that
+market cap does most of the heavy lifting. The **Fama-MacBeth** cross-sectional test shows
+which coefficients survive month-to-month — examine the t-statistics to see whether either
+variable is consistently significant beyond the size effect.
+
+**Where Amihud uniquely wins:** within size buckets (see Robustness tab), Amihud captures
+microstructure variation that neither MktCap nor FF% can see.
 """, style={"color": COLORS["text_muted"], "fontSize": "0.85rem", "lineHeight": 1.6}),
             ]),
             style={"backgroundColor": COLORS["card"], "border": f"1px solid {COLORS['card_border']}",
@@ -3126,12 +3148,11 @@ def page_conclusion():
         if len(_oos_amihud) and len(_oos_ff):
             _a_oos = float(_oos_amihud.iloc[0]["OOS_R2"])
             _f_oos = float(_oos_ff.iloc[0]["OOS_R2"])
-            _ratio = _a_oos / max(_f_oos, 1e-10)
             conclusion_note = (
-                f"\n\n**8. Out-of-sample validation confirms the thesis.**\n"
-                f"Models fitted on 2025 data and applied to 2026 YTD show Amihud OOS R²="
-                f"{_a_oos:.4f} vs Free-Float OOS R²={_f_oos:.4f} ({_ratio:.1f}× superiority). "
-                f"See the **OOS Validation** page for full walk-forward and holdout results."
+                f"\n\n**8. Out-of-sample results.**\n"
+                f"Models fitted on 2025 and applied to 2026 YTD: Amihud standalone OOS R²="
+                f"{_a_oos:.4f}, Free-Float standalone OOS R²={_f_oos:.4f}. "
+                f"See the **OOS Validation** page for size-controlled and walk-forward results."
             )
 
     return html.Div([
@@ -3145,15 +3166,15 @@ def page_conclusion():
         ]),
 
         dbc.Row([
-            dbc.Col(make_card("Amihud Wins", f"{superiority_ret:.1f}× R²",
-                              "Superior to free-float for |Return|",
-                              color=COLORS["accent_green"]), md=4),
-            dbc.Col(make_card("FF% is Stale", f"{staleness['streak_3plus']:.0%} stale",
-                              "Unchanged for an entire quarter or more",
-                              color=COLORS["accent_red"]), md=4),
-            dbc.Col(make_card("Robust to Size", "All Buckets",
-                              "Holds for Small, Mid, and Large caps",
+            dbc.Col(make_card("Amihud: Best Standalone", f"{superiority_ret:.0f}× R²",
+                              "Univariate, but largely a size proxy",
                               color=COLORS["accent_blue"]), md=4),
+            dbc.Col(make_card("FF%: Best Incremental", "Over MktCap",
+                              "Adds more unique info beyond size",
+                              color=COLORS["accent_orange"]), md=4),
+            dbc.Col(make_card("Amihud: Best Within-Size", "Small Caps",
+                              "Dominates where FF% is blind",
+                              color=COLORS["accent_green"]), md=4),
         ], className="g-3 mb-4"),
 
         dbc.Card(
@@ -3161,56 +3182,54 @@ def page_conclusion():
                 dcc.Markdown(f"""
 ## Key Findings
 
-**1. Amihud ILLIQ is the superior liquidity risk signal.**
-Across {df.shape[0]:,} daily observations and {df['ticker'].nunique():,} US equities in 2025,
-Amihud ILLIQ explains **{superiority_hl:.1f}× more** variance in intraday H-L range — the
-cleanest comparison because H-L range is derived from high/low prices and shares no data overlap
-with the Amihud computation (which uses close-to-close returns). On close-to-close |Return|,
-the superiority is **{superiority_ret:.1f}×**, though this metric has a modest contemporaneous
-overlap (today's return is 1 of 252 inputs to the rolling Amihud window).
+**1. Amihud is the strongest standalone predictor — but mostly captures size.**
+Across {df.shape[0]:,} observations and {df['ticker'].nunique():,} US equities, Amihud explains
+{superiority_ret:.0f}× more return variance than free-float as a univariate predictor. However,
+Amihud correlates with market cap at ρ = −0.95 — most of its power is a size effect.
+Market cap alone actually outperforms Amihud alone.
 
-**2. Free-float data is structurally stale.**
-{staleness['streak_3plus']:.0%} of tickers have a 3+ month unchanged streak.
+**2. Free-float adds more unique information beyond size.**
+After controlling for market cap, FF% contributes more incremental ΔR² than Amihud
+for both |Return| and H-L Range. FF% is less collinear with size (ρ ≈ 0.43) and captures
+ownership structure — a genuinely different dimension.
+
+**3. Within size buckets, Amihud dominates — especially in small caps.**
+When market cap is held constant, Amihud outperforms FF% in every size tercile, with
+the gap widest in small caps (10–100× more R²). This is Amihud's genuine, unique
+contribution: microstructure friction that static filing data cannot see.
+
+**4. Free-float data is structurally stale.**
+{staleness['streak_3plus']:.0%} of tickers are unchanged for 3+ consecutive months.
 {staleness['never_changed_pct']:.0%} showed zero change across all 12 months.
-Changes that do occur cluster at quarterly filing boundaries, confirming the data is
-derived from periodic SEC filings — not live market activity.
+Amihud updates daily from live trading data.
 
-**3. Amihud is a live, daily signal.**
-Computed directly from |return| / dollar volume, it updates every trading day and
-reflects actual market liquidity conditions in real-time.
+**5. The liquidity term structure is a genuine operational tool.**
+The 21-day / 252-day Amihud z-score provides a live, cross-sectionally comparable
+stress signal that free-float cannot offer at any frequency.
 
-**4. The result is robust:**
-- Consistent across **Small / Mid / Large** market cap terciles (not a size effect)
-- Stable across **all 12 months** of 2025 (not period-specific)
-- Holds for **multiple return definitions** (close-to-close, H-L range, Parkinson volatility)
-- Confirmed by both **pooled OLS** and **Fama-MacBeth** cross-sectional methodology
-
-**5. The liquidity term structure adds tactical value.**
-The 21-day / 252-day Amihud ratio and z-score provide a live, cross-sectionally comparable
-stress signal — analogous to a CDS spread for liquidity risk.
-
-**6. Extreme move prediction improves with Amihud.**
-Adding lagged Amihud z-score to a market-cap-only baseline catches extreme daily moves that
-the current framework misses. The false negative reduction is the operational headline.
+**6. Extreme move prediction improves with Amihud z-score.**
+Adding lagged z-score to a size-only baseline catches extreme daily moves the
+baseline misses. This is the operational deliverable.
 
 **7. Downside asymmetry confirms the risk case.**
-Amihud's predictive power is strongest on down days — confirming it is specifically
-calibrated to the downside liquidity deterioration that risk management cares about.
+Amihud's predictive power is strongest on down days — the scenario that risk
+management cares about most.
 
 ## Recommendation
 
-Integrate the **Amihud ILLIQ ratio** into the risk framework as the primary liquidity metric
-for position sizing and concentration risk. Deploy the **liquidity z-score** as a daily alert
-system for transient illiquidity spikes. Free-float should be retained as a secondary,
-cross-referencing measure — but its structural staleness means it should not be relied upon
-as the sole indicator of liquidity risk.
+**Use both signals for their respective strengths:**
+- **Amihud ILLIQ** as the primary *within-bucket* liquidity signal and daily monitoring
+  tool. Best value in small/mid caps. Deploy the **z-score** for transient stress alerts.
+- **Free-float %** as the *cross-sectional* ownership structure signal that adds unique
+  information beyond market cap. Best value in large caps where filing data is timely.
+- **Neither replaces market cap** — size dominates both as an explanatory variable.
 
 ## Suggested Next Steps
 
-1. **Sector Controls** — Add GICS sector dummies to confirm sector neutrality
-2. **VIX Regime Splits** — Test relationship strength in high vs low volatility markets
-3. **Lag Decay Test** — Measure Amihud's predictive power at 1, 3, 5 day horizons
-4. **Portfolio-Level Backtest** — Simulate position sizing using Amihud vs free-float constraints
+1. **Lagged Amihud Test** — Use t−1 Amihud to eliminate contemporaneous overlap with returns
+2. **Sector Controls** — Add GICS sector dummies to confirm sector neutrality
+3. **Combined Model** — Develop a composite score weighting Amihud, FF%, and MktCap by context
+4. **Portfolio-Level Backtest** — Simulate position sizing using combined constraints
 {conclusion_note}
 """, style={"color": COLORS["text_muted"], "fontSize": "0.9rem", "lineHeight": 1.7}),
             ]),
@@ -3271,8 +3290,8 @@ def page_ch_evidence():
     return html.Div([
         _chapter_header(
             "The Evidence",
-            "Amihud vs Free-Float R\u00b2 horse race across multiple metrics, full regression "
-            "specifications with \u0394R\u00b2 decomposition, Fama-MacBeth cross-sectional tests, "
+            "Standalone R\u00b2 comparison, full regression specifications with \u0394R\u00b2 "
+            "decomposition showing where each signal shines, Fama-MacBeth tests, "
             "and visual scatter analysis."
         ),
         dbc.Tabs([
