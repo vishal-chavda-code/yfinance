@@ -2260,8 +2260,8 @@ def _fig_scenario_overlay(sm, col, y_label, title, color, log_y=False):
     return fig
 
 
-def page_term_structure():
-    """Part 2: Term structure & z-score visualization."""
+def page_stress_monitor():
+    """Part 2: Liquidity stress monitor & z-score visualization."""
     return html.Div([
         html.H2("Liquidity Stress Monitor", style={
             "color": COLORS["text"], "fontWeight": 700, "marginBottom": "8px"}),
@@ -2326,7 +2326,7 @@ friction is 2 standard deviations above this stock's own norm.
     ])
 
 
-def _fig_term_structure_curve(ticker):
+def _fig_amihud_horizon_curve(ticker):
     """Per-ticker illiq_21d vs illiq_252d over time."""
     tkr = df[df["ticker"] == ticker].sort_values("date").copy()
     if tkr.empty:
@@ -3341,7 +3341,7 @@ def page_ch_problem():
             dbc.Tab(label="Staleness Evidence", children=[page_staleness()],
                     tab_style=_TAB_STYLE, label_style=_LABEL_STYLE,
                     active_label_style=_ACTIVE_LABEL),
-            dbc.Tab(label="Liquidity Stress Monitor", children=[page_term_structure()],
+            dbc.Tab(label="Liquidity Stress Monitor", children=[page_stress_monitor()],
                     tab_style=_TAB_STYLE, label_style=_LABEL_STYLE,
                     active_label_style=_ACTIVE_LABEL),
         ], className="mb-3"),
@@ -3621,12 +3621,12 @@ def update_ticker(ticker):
     Output("ts-zscore-chart", "figure"),
     Input("ts-ticker-dropdown", "value"),
 )
-def update_term_structure(ticker):
+def update_stress_monitor(ticker):
     if not ticker:
         empty = go.Figure()
         empty.update_layout(template=PLOT_TEMPLATE, title="Select a ticker")
         return empty, empty
-    return _fig_term_structure_curve(ticker), _fig_zscore_bands(ticker)
+    return _fig_amihud_horizon_curve(ticker), _fig_zscore_bands(ticker)
 
 
 # ── Bucket Tuner Callbacks ──

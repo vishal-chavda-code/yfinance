@@ -70,7 +70,7 @@ def load_2025_training_data() -> pd.DataFrame:
     df["log_mktcap"] = np.log1p(df["cur_mkt_cap"])
     df["log_illiq"] = np.log(df["illiq_252d"]).replace(-np.inf, np.nan)
 
-    # Term structure
+    # Short/long horizon Amihud
     df = df.sort_values(["ticker", "date"])
     df["illiq_21d"] = (
         df.groupby("ticker")["illiq"]

@@ -5,7 +5,7 @@ Mirrors the feature engineering in plotly_dash.load_data() and
 src/calc_rolling_amihud.py but for the 2026 evaluation period:
   - Combines 2025 OHLCV (lookback) + 2026 OHLCV
   - Computes daily ILLIQ, rolling 252d Amihud, 21d Amihud
-  - Computes illiq_ratio, illiq_zscore (term structure)
+  - Computes illiq_ratio, illiq_zscore (short/long horizon Amihud)
   - Forward-fills the last known 2025 free-float onto 2026 rows
   - Outputs a single oos_features.parquet ready for evaluation
 
@@ -56,7 +56,7 @@ def load_and_combine() -> pd.DataFrame:
 
 
 def compute_amihud_features(df: pd.DataFrame) -> pd.DataFrame:
-    """Compute rolling Amihud + term structure features."""
+    """Compute rolling Amihud + short/long horizon Amihud features."""
     print("Computing daily returns and ILLIQ...")
     df["return"] = df.groupby("ticker")["close"].pct_change()
     df["dollar_volume"] = df["close"] * df["volume"]
@@ -71,7 +71,7 @@ def compute_amihud_features(df: pd.DataFrame) -> pd.DataFrame:
         .transform(lambda x: x.rolling(ROLLING_WINDOW, min_periods=ROLLING_MIN_PERIODS).mean())
     )
 
-    print("Computing 21d Amihud and term structure...")
+    print("Computing 21d Amihud and short/long horizon Amihud...")
     df["illiq_21d"] = (
         df.groupby("ticker")["illiq"]
         .transform(lambda x: x.rolling(21, min_periods=15).mean())
@@ -131,7 +131,7 @@ if __name__ == "__main__":
     # 1. Combine 2025 lookback + 2026 OHLCV
     df_combined, common = load_and_combine()
 
-    # 2. Compute Amihud + term structure on the combined series
+    # 2. Compute Amihud + short/long horizon Amihud on the combined series
     df_combined = compute_amihud_features(df_combined)
 
     # 3. Filter to 2026 only
