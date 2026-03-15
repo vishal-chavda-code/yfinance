@@ -3820,4 +3820,4 @@ if __name__ == "__main__":
     print("  Liquidity Risk Dashboard")
     print("  http://127.0.0.1:8050")
     print("=" * 60 + "\n")
-    app.run(debug=False, port=8050)
+    app.run(debug=True, port=8050)
