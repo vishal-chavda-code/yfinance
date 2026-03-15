@@ -66,6 +66,7 @@ def load_2025_training_data() -> pd.DataFrame:
 
     df["hl_range"] = (df["high"] - df["low"]) / df["close"]
     df["ff_ratio"] = df["eqy_free_float_pct"] / 100
+    df["cur_mkt_cap"] = df["cur_mkt_cap"] * 1e6   # source is in $M -> convert to $
     df["log_mktcap"] = np.log1p(df["cur_mkt_cap"])
     df["log_illiq"] = np.log(df["illiq_252d"]).replace(-np.inf, np.nan)
 
@@ -252,8 +253,8 @@ def run_extreme_is_oos(train_full: pd.DataFrame, test_full: pd.DataFrame,
     X_addon_tr = train_model[["bucket_num", "zscore_lag1"]].values
     y_tr = train_model["extreme_flag"].values
 
-    lr_base = LogisticRegression(max_iter=1000, solver="lbfgs").fit(X_base_tr, y_tr)
-    lr_addon = LogisticRegression(max_iter=1000, solver="lbfgs").fit(X_addon_tr, y_tr)
+    lr_base = LogisticRegression(max_iter=1000, solver="lbfgs", class_weight="balanced").fit(X_base_tr, y_tr)
+    lr_addon = LogisticRegression(max_iter=1000, solver="lbfgs", class_weight="balanced").fit(X_addon_tr, y_tr)
 
     # In-sample evaluation
     pred_base_tr = lr_base.predict(X_base_tr)

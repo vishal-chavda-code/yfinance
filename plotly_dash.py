@@ -589,8 +589,8 @@ def compute_extreme_moves(dfc, df_full):
     X_addon = model_df[["bucket_num", "zscore_lag1"]].values
     y = model_df["extreme_flag"].values
 
-    lr_base = LogisticRegression(max_iter=1000, solver="lbfgs").fit(X_base, y)
-    lr_addon = LogisticRegression(max_iter=1000, solver="lbfgs").fit(X_addon, y)
+    lr_base = LogisticRegression(max_iter=1000, solver="lbfgs", class_weight="balanced").fit(X_base, y)
+    lr_addon = LogisticRegression(max_iter=1000, solver="lbfgs", class_weight="balanced").fit(X_addon, y)
 
     pred_base = lr_base.predict(X_base)
     pred_addon = lr_addon.predict(X_addon)
@@ -2227,19 +2227,21 @@ def _fig_scenario_overlay(sm, col, y_label, title, color, log_y=False):
 def page_term_structure():
     """Part 2: Term structure & z-score visualization."""
     return html.Div([
-        html.H2("Liquidity Term Structure", style={
+        html.H2("Liquidity Stress Monitor", style={
             "color": COLORS["text"], "fontWeight": 700, "marginBottom": "8px"}),
         html.P(
-            "The 21-day and 252-day Amihud windows reveal different regimes of the same "
-            "underlying quantity — like a yield curve with a short end and a long end. "
-            "When short >> long, a transient liquidity stress event is unfolding.",
+            "Amihud ILLIQ at two horizons — 21-day (recent friction) vs 252-day (structural "
+            "baseline) — for a single stock. This is not technical analysis: Amihud measures "
+            "price impact per dollar of volume, a microstructure quantity. The ratio of short "
+            "to long reveals whether current liquidity is abnormally stressed or calm.",
             style={"color": COLORS["text_muted"], "fontSize": "0.95rem",
                    "marginBottom": "4px", "maxWidth": "720px"},
         ),
         html.P(
-            "Top chart: 21d and 252d Amihud ILLIQ (log scale, ratio units). "
-            "Bottom chart: liquidity z-score (unitless) — how many standard deviations the "
-            "current short/long ratio is from its own rolling mean. ±2 bands mark stress/calm thresholds.",
+            "Top chart: 21d and 252d Amihud ILLIQ (log scale). When the red line (21d) rises "
+            "above the blue dashed line (252d), short-term friction exceeds the structural norm. "
+            "Bottom chart: the z-score of that ratio — how many standard deviations from the "
+            "stock's own historical average. Beyond ±2 indicates unusual stress or calm.",
             style={"color": COLORS["text_muted"], "fontSize": "0.8rem",
                    "marginBottom": "24px", "maxWidth": "720px", "fontStyle": "italic"},
         ),
@@ -2263,22 +2265,23 @@ def page_term_structure():
 
         dbc.Card(
             dbc.CardBody([
-                html.H5("The CDS Analog", style={
+                html.H5("What This Is (and Isn't)", style={
                     "color": COLORS["accent_cyan"], "fontWeight": 700, "marginBottom": "8px"}),
                 dcc.Markdown("""
-The **liquidity z-score** is `(illiq_ratio − rolling_mean) / rolling_std` — a cross-sectionally
-comparable stress signal. A z-score of +2.0 means this stock's short-term illiquidity is
-2 standard deviations above its own historical norm.
+**This is not technical analysis.** Moving averages of price are backward-looking pattern
+matching. Amihud ILLIQ measures a *structural* quantity — price impact per dollar of volume —
+that reflects order book depth, market-maker capacity, and trading costs. The 21d and 252d
+windows are simply short-horizon vs long-horizon averages of that structural measure.
 
-Just as a **CDS spread** measures near-term credit stress relative to the issuer's long-run
-rating, the liquidity z-score measures near-term **liquidity stress** relative to the stock's
-structural baseline. This works for comparing a micro-cap and a mega-cap on the same scale.
+The **z-score** = `(ratio − rolling_mean) / rolling_std` normalizes across stocks so you can
+compare a micro-cap and a mega-cap on the same scale. A z-score of +2.0 means current
+friction is 2 standard deviations above this stock's own norm.
 
-| Regime | Meaning | Risk |
-|--------|---------|------|
-| Short >> Long | Illiquidity spike | Transient stress — earnings, thin market |
-| Short << Long | Liquidity improvement | Unusual volume — accumulation, rebal |
-| Both elevated | Chronic illiquidity | Highest persistent tail risk |
+| Regime | Interpretation | Risk Implication |
+|--------|---------------|------------------|
+| 21d >> 252d (z > +2) | Transient stress | Earnings, thin market, event-driven |
+| 21d << 252d (z < −2) | Unusual liquidity | Institutional accumulation, rebal |
+| Both elevated | Chronic illiquidity | Persistent tail risk, position sizing concern |
 """, style={"color": COLORS["text_muted"], "fontSize": "0.85rem", "lineHeight": 1.6}),
             ]),
             style={"backgroundColor": COLORS["card"], "border": f"1px solid {COLORS['card_border']}",
@@ -2312,7 +2315,7 @@ def _fig_term_structure_curve(ticker):
     # Shade divergence regions
     fig.update_layout(
         template=PLOT_TEMPLATE,
-        title=dict(text=f"{ticker} — Liquidity Term Structure", font=dict(size=16)),
+        title=dict(text=f"{ticker} — Short vs Long Horizon Amihud", font=dict(size=16)),
         yaxis=dict(title="Amihud ILLIQ", type="log"),
         height=380,
         legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="center", x=0.5),
@@ -2913,7 +2916,7 @@ def _oos_tab_size(oos):
     size_order = ["Small Cap", "Mid Cap", "Large Cap"]
 
     for col_idx, dep in enumerate(["|Return|", "H-L Range"], 1):
-        sub = sz[(sz["Dependent"] == dep) & (sz["Model"] == "\u2464 Amihud Only")]
+        sub = sz[(sz["Dependent"] == dep) & (sz["Model"] == "\u2463 Amihud Only")]
         for sample_label, color in [("IS", COLORS["accent_blue"]), ("OOS", COLORS["accent_green"])]:
             d = sub[sub["Set"] == sample_label].set_index("Size").reindex(size_order)
             if d.empty:
@@ -3278,7 +3281,7 @@ def page_ch_problem():
             dbc.Tab(label="Staleness Evidence", children=[page_staleness()],
                     tab_style=_TAB_STYLE, label_style=_LABEL_STYLE,
                     active_label_style=_ACTIVE_LABEL),
-            dbc.Tab(label="Amihud Term Structure", children=[page_term_structure()],
+            dbc.Tab(label="Liquidity Stress Monitor", children=[page_term_structure()],
                     tab_style=_TAB_STYLE, label_style=_LABEL_STYLE,
                     active_label_style=_ACTIVE_LABEL),
         ], className="mb-3"),

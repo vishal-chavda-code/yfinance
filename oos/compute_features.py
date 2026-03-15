@@ -119,6 +119,7 @@ def derive_features(df: pd.DataFrame) -> pd.DataFrame:
     df["hl_range"] = (df["high"] - df["low"]) / df["close"]
     df["parkinson_vol"] = np.log(df["high"] / df["low"])
     df["ff_ratio"] = df["eqy_free_float_pct"] / 100
+    df["cur_mkt_cap"] = df["cur_mkt_cap"] * 1e6   # source is in $M -> convert to $
     df["log_mktcap"] = np.log1p(df["cur_mkt_cap"])
     df["log_illiq"] = np.log(df["illiq_252d"]).replace(-np.inf, np.nan)
     df["month"] = df["date"].dt.to_period("M").astype(str)
